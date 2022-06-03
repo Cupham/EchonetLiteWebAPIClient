@@ -1,0 +1,27 @@
+name: el_webapi_api
+description: A library to interact with ECHONET Lite Web API (v1.3.0).
+ It uses http.Client library and supports parse returned data into corresponding objects.
+version: 0.0.1
+homepage: https://github.com/Cupham/EchonetLiteWebAPIClient
+environment:
+  sdk: ">=2.16.2 <3.0.0"
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  http: ^0.13.0
+  json_annotation: ^4.4.0
+  intl: ^0.17.0
+
+dev_dependencies:
+  flutter_lints: ^2.0.1
+  flutter_test:
+    sdk: flutter
+  analyzer: ^4.1.0
+  coverage: ^1.0.3
+  build_runner: ^2.0.0
+  json_serializable: ^6.0.0
+  test: ^1.16.4
+  mock_web_server: ^5.0.0-nullsafety.1
+ 
