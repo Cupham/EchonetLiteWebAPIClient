@@ -1,4 +1,4 @@
-import 'package:el_webapi_api/el_webapi.dart';
+import 'package:el_webapi_api/el_webapi_api.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'const/file_names.dart';
 import 'mock_web_api_server/expectedResults/parsed_devices.dart';

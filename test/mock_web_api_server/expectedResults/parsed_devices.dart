@@ -1,6 +1,6 @@
 // ignore_for_file: lines_longer_than_80_chars
 
-import 'package:el_webapi_api/el_webapi.dart';
+import 'package:el_webapi_api/el_webapi_api.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:intl/intl.dart';
 
