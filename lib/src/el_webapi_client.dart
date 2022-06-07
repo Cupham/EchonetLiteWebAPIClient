@@ -1,4 +1,4 @@
-// ignore_for_file: lines_longer_than_80_chars
+// ignore_for_file: lines_longer_than_80_chars, avoid_print
 
 import 'dart:convert';
 
@@ -29,156 +29,301 @@ class ElWebApiClient {
       if (profile.deviceType == type) {
         switch (type) {
           case DeviceType.airCleaner:
-            devices.add(await getAirCleaner(profile.id));
+            final dev = await getGeneralLighting(profile.id);
+            if (dev != null) {
+              devices.add(dev);
+            }
             break;
           case DeviceType.airConditionerVentilationFan:
-            devices.add(await getAirConditionerVentilationFan(profile.id));
+            final dev = await getAirConditionerVentilationFan(profile.id);
+            if (dev != null) {
+              devices.add(dev);
+            }
             break;
           case DeviceType.bathHeatingStatusSensor:
-            devices.add(await getBathHeatingStatusSensor(profile.id));
+            final dev = await getBathHeatingStatusSensor(profile.id);
+            if (dev != null) {
+              devices.add(dev);
+            }
             break;
           case DeviceType.bathroomHeaterDryer:
-            devices.add(await getBathroomHeaterDryer(profile.id));
+            final dev = await getBathroomHeaterDryer(profile.id);
+            if (dev != null) {
+              devices.add(dev);
+            }
             break;
           case DeviceType.co2Sensor:
-            devices.add(await getCo2Sensor(profile.id));
+            final dev = await getCo2Sensor(profile.id);
+            if (dev != null) {
+              devices.add(dev);
+            }
             break;
           case DeviceType.coldOrHotWaterHeatSourceEquipment:
-            devices.add(await getColdOrHotWaterHeatSourceEquipment(profile.id));
+            final dev = await getColdOrHotWaterHeatSourceEquipment(profile.id);
+            if (dev != null) {
+              devices.add(dev);
+            }
             break;
           case DeviceType.commercialAirConditionerIndoorUnit:
-            devices
-                .add(await getCommercialAirConditionerIndoorUnit(profile.id));
+            final dev = await getCommercialAirConditionerIndoorUnit(profile.id);
+            if (dev != null) {
+              devices.add(dev);
+            }
             break;
           case DeviceType.commercialAirConditionerOutdoorUnit:
-            devices
-                .add(await getCommercialAirConditionerOutdoorUnit(profile.id));
+            final dev =
+                await getCommercialAirConditionerOutdoorUnit(profile.id);
+            if (dev != null) {
+              devices.add(dev);
+            }
             break;
           case DeviceType.commercialShowcase:
-            devices.add(await getCommercialShowcase(profile.id));
+            final dev = await getCommercialShowcase(profile.id);
+            if (dev != null) {
+              devices.add(dev);
+            }
             break;
           case DeviceType.commercialShowcaseOutdoorUnit:
-            devices
-                .add(await getCommercialAirConditionerOutdoorUnit(profile.id));
+            final dev =
+                await getCommercialAirConditionerOutdoorUnit(profile.id);
+            if (dev != null) {
+              devices.add(dev);
+            }
             break;
           case DeviceType.controller:
-            devices.add(await getController(profile.id));
+            final dev = await getController(profile.id);
+            if (dev != null) {
+              devices.add(dev);
+            }
             break;
           case DeviceType.cookingHeater:
-            devices.add(await getCookingHeater(profile.id));
+            final dev = await getCookingHeater(profile.id);
+            if (dev != null) {
+              devices.add(dev);
+            }
             break;
           case DeviceType.currentSensor:
-            devices.add(await getCurrentSensor(profile.id));
+            final dev = await getCurrentSensor(profile.id);
+            if (dev != null) {
+              devices.add(dev);
+            }
             break;
           case DeviceType.electricEnergySensor:
-            devices.add(await getElectricEnergySensor(profile.id));
+            final dev = await getElectricEnergySensor(profile.id);
+            if (dev != null) {
+              devices.add(dev);
+            }
             break;
           case DeviceType.electricLock:
-            devices.add(await getElectricLock(profile.id));
+            final dev = await getElectricLock(profile.id);
+            if (dev != null) {
+              devices.add(dev);
+            }
             break;
           case DeviceType.electricRainDoor:
-            devices.add(await getElectricRainDoor(profile.id));
+            final dev = await getElectricRainDoor(profile.id);
+            if (dev != null) {
+              devices.add(dev);
+            }
             break;
           case DeviceType.electricWaterHeater:
-            devices.add(await getElectricWaterHeater(profile.id));
+            final dev = await getElectricWaterHeater(profile.id);
+            if (dev != null) {
+              devices.add(dev);
+            }
             break;
           case DeviceType.emergencyButton:
-            devices.add(await getEmergencyButton(profile.id));
+            final dev = await getEmergencyButton(profile.id);
+            if (dev != null) {
+              devices.add(dev);
+            }
             break;
           case DeviceType.enhancedLightingSystem:
-            devices.add(await getEnhancedLightingSystem(profile.id));
+            final dev = await getEnhancedLightingSystem(profile.id);
+            if (dev != null) {
+              devices.add(dev);
+            }
             break;
           case DeviceType.evCharger:
-            devices.add(await getEvCharger(profile.id));
+            final dev = await getEvCharger(profile.id);
+            if (dev != null) {
+              devices.add(dev);
+            }
             break;
 
           case DeviceType.evChargerDischarger:
-            devices.add(await getEvChargerDischarger(profile.id));
+            final dev = await getEvChargerDischarger(profile.id);
+            if (dev != null) {
+              devices.add(dev);
+            }
             break;
           case DeviceType.floorHeater:
-            devices.add(await getFloorHeater(profile.id));
+            final dev = await getFloorHeater(profile.id);
+            if (dev != null) {
+              devices.add(dev);
+            }
             break;
           case DeviceType.fuelCell:
-            devices.add(await getFuelCell(profile.id));
+            final dev = await getFuelCell(profile.id);
+            if (dev != null) {
+              devices.add(dev);
+            }
             break;
           case DeviceType.gasMeter:
-            devices.add(await getGasMeter(profile.id));
+            final dev = await getGasMeter(profile.id);
+            if (dev != null) {
+              devices.add(dev);
+            }
             break;
-
           case DeviceType.generalLighting:
-            devices.add(await getGeneralLighting(profile.id));
+            final GeneralLighting? light = await getGeneralLighting(profile.id);
+            if (light != null) {
+              devices.add(light);
+            }
             break;
           case DeviceType.homeAirConditioner:
-            devices.add(await getHomeAirConditioner(profile.id));
+            final dev = await getHomeAirConditioner(profile.id);
+            if (dev != null) {
+              devices.add(dev);
+            }
             break;
           case DeviceType.humanDetectionSensor:
-            devices.add(await getHumanDetectionSensor(profile.id));
+            final dev = await getHumanDetectionSensor(profile.id);
+            if (dev != null) {
+              devices.add(dev);
+            }
             break;
           case DeviceType.humiditySensor:
-            devices.add(await getHumiditySensor(profile.id));
+            final dev = await getHumiditySensor(profile.id);
+            if (dev != null) {
+              devices.add(dev);
+            }
             break;
           case DeviceType.hvSmartElectricEnergyMeter:
-            devices.add(await getHvSmartElectricEnergyMeter(profile.id));
+            final dev = await getHvSmartElectricEnergyMeter(profile.id);
+            if (dev != null) {
+              devices.add(dev);
+            }
             break;
           case DeviceType.hybridWaterHeater:
-            devices.add(await getHybridWaterHeater(profile.id));
+            final dev = await getHybridWaterHeater(profile.id);
+            if (dev != null) {
+              devices.add(dev);
+            }
             break;
           case DeviceType.illuminanceSensor:
-            devices.add(await getIlluminanceSensor(profile.id));
+            final dev = await getIlluminanceSensor(profile.id);
+            if (dev != null) {
+              devices.add(dev);
+            }
             break;
           case DeviceType.instantaneousWaterHeater:
-            devices.add(await getInstantaneousWaterHeater(profile.id));
+            final dev = await getInstantaneousWaterHeater(profile.id);
+            if (dev != null) {
+              devices.add(dev);
+            }
             break;
           case DeviceType.lightingSystem:
-            devices.add(await getLightingSystem(profile.id));
+            final dev = await getLightingSystem(profile.id);
+            if (dev != null) {
+              devices.add(dev);
+            }
             break;
           case DeviceType.lvSmartElectricEnergyMeter:
-            devices.add(await getLvSmartElectricEnergyMeter(profile.id));
+            final dev = await getLvSmartElectricEnergyMeter(profile.id);
+            if (dev != null) {
+              devices.add(dev);
+            }
             break;
           case DeviceType.monoFunctionalLighting:
-            devices.add(await getMonoFunctionalLighting(profile.id));
+            final dev = await getMonoFunctionalLighting(profile.id);
+            if (dev != null) {
+              devices.add(dev);
+            }
             break;
           case DeviceType.powerDistributionBoardMetering:
-            devices.add(await getPowerDistributionBoardMetering(profile.id));
+            final dev = await getPowerDistributionBoardMetering(profile.id);
+            if (dev != null) {
+              devices.add(dev);
+            }
             break;
           case DeviceType.pvPowerGeneration:
-            devices.add(await getPvPowerGeneration(profile.id));
+            final dev = await getPvPowerGeneration(profile.id);
+            if (dev != null) {
+              devices.add(dev);
+            }
             break;
           case DeviceType.refrigerator:
-            devices.add(await getRefrigerator(profile.id));
+            final dev = await getRefrigerator(profile.id);
+            if (dev != null) {
+              devices.add(dev);
+            }
             break;
           case DeviceType.riceCooker:
-            devices.add(await getRiceCooker(profile.id));
+            final dev = await getRiceCooker(profile.id);
+            if (dev != null) {
+              devices.add(dev);
+            }
             break;
           case DeviceType.smartElectricEnergySubMeter:
-            devices.add(await getSmartElectricEnergySubMeter(profile.id));
+            final dev = await getSmartElectricEnergySubMeter(profile.id);
+            if (dev != null) {
+              devices.add(dev);
+            }
             break;
           case DeviceType.storageBattery:
-            devices.add(await getStorageBattery(profile.id));
+            final dev = await getStorageBattery(profile.id);
+            if (dev != null) {
+              devices.add(dev);
+            }
             break;
           case DeviceType.electricSwitch:
-            devices.add(await getSwitch(profile.id));
+            final dev = await getSwitch(profile.id);
+            if (dev != null) {
+              devices.add(dev);
+            }
             break;
           case DeviceType.temperatureSensor:
-            devices.add(await getTemperatureSensor(profile.id));
+            final dev = await getTemperatureSensor(profile.id);
+            if (dev != null) {
+              devices.add(dev);
+            }
             break;
           case DeviceType.tv:
-            devices.add(await getTv(profile.id));
+            final dev = await getTv(profile.id);
+            if (dev != null) {
+              devices.add(dev);
+            }
             break;
           case DeviceType.ventilationFan:
-            devices.add(await getVentilationFan(profile.id));
+            final dev = await getVentilationFan(profile.id);
+            if (dev != null) {
+              devices.add(dev);
+            }
             break;
           case DeviceType.vocSensor:
-            devices.add(await getVocSensor(profile.id));
+            final dev = await getVocSensor(profile.id);
+            if (dev != null) {
+              devices.add(dev);
+            }
             break;
           case DeviceType.washerDryer:
-            devices.add(await getWasherDryer(profile.id));
+            final dev = await getWasherDryer(profile.id);
+            if (dev != null) {
+              devices.add(dev);
+            }
             break;
           case DeviceType.waterFlowMeter:
-            devices.add(await getWaterFlowMeter(profile.id));
+            final dev = await getWaterFlowMeter(profile.id);
+            if (dev != null) {
+              devices.add(dev);
+            }
             break;
           case DeviceType.wattHourMeter:
-            devices.add(await getWattHourMeter(profile.id));
+            final dev = await getWattHourMeter(profile.id);
+            if (dev != null) {
+              devices.add(dev);
+            }
             break;
           case DeviceType.notYetSupported:
             break;
@@ -319,153 +464,303 @@ class ElWebApiClient {
     for (final profile in registeredDeviceList.profiles) {
       switch (profile.deviceType) {
         case DeviceType.airCleaner:
-          devices.add(await getAirCleaner(profile.id));
+          final device = await getAirCleaner(profile.id);
+          if (device != null) {
+            devices.add(device);
+          }
           break;
         case DeviceType.airConditionerVentilationFan:
-          devices.add(await getAirConditionerVentilationFan(profile.id));
+          final device = await getAirConditionerVentilationFan(profile.id);
+          if (device != null) {
+            devices.add(device);
+          }
           break;
         case DeviceType.bathHeatingStatusSensor:
-          devices.add(await getBathHeatingStatusSensor(profile.id));
+          final device = await getBathHeatingStatusSensor(profile.id);
+          if (device != null) {
+            devices.add(device);
+          }
           break;
         case DeviceType.bathroomHeaterDryer:
-          devices.add(await getBathroomHeaterDryer(profile.id));
+          final device = await getBathroomHeaterDryer(profile.id);
+          if (device != null) {
+            devices.add(device);
+          }
           break;
         case DeviceType.co2Sensor:
-          devices.add(await getCo2Sensor(profile.id));
+          final device = await getCo2Sensor(profile.id);
+          if (device != null) {
+            devices.add(device);
+          }
           break;
         case DeviceType.coldOrHotWaterHeatSourceEquipment:
-          devices.add(await getColdOrHotWaterHeatSourceEquipment(profile.id));
+          final device = await getColdOrHotWaterHeatSourceEquipment(profile.id);
+          if (device != null) {
+            devices.add(device);
+          }
           break;
         case DeviceType.commercialAirConditionerIndoorUnit:
-          devices.add(await getCommercialAirConditionerIndoorUnit(profile.id));
+          final device =
+              await getCommercialAirConditionerIndoorUnit(profile.id);
+          if (device != null) {
+            devices.add(device);
+          }
           break;
         case DeviceType.commercialAirConditionerOutdoorUnit:
-          devices.add(await getCommercialAirConditionerOutdoorUnit(profile.id));
+          final device =
+              await getCommercialAirConditionerOutdoorUnit(profile.id);
+          if (device != null) {
+            devices.add(device);
+          }
           break;
         case DeviceType.commercialShowcase:
-          devices.add(await getCommercialShowcase(profile.id));
+          final device = await getCommercialShowcase(profile.id);
+          if (device != null) {
+            devices.add(device);
+          }
           break;
         case DeviceType.commercialShowcaseOutdoorUnit:
-          devices.add(await getCommercialAirConditionerOutdoorUnit(profile.id));
+          final device =
+              await getCommercialAirConditionerOutdoorUnit(profile.id);
+          if (device != null) {
+            devices.add(device);
+          }
           break;
         case DeviceType.controller:
-          devices.add(await getController(profile.id));
+          final device = await getController(profile.id);
+          if (device != null) {
+            devices.add(device);
+          }
           break;
         case DeviceType.cookingHeater:
-          devices.add(await getCookingHeater(profile.id));
+          final device = await getCookingHeater(profile.id);
+          if (device != null) {
+            devices.add(device);
+          }
           break;
         case DeviceType.currentSensor:
-          devices.add(await getCurrentSensor(profile.id));
+          final device = await getCurrentSensor(profile.id);
+          if (device != null) {
+            devices.add(device);
+          }
           break;
         case DeviceType.electricEnergySensor:
-          devices.add(await getElectricEnergySensor(profile.id));
+          final device = await getElectricEnergySensor(profile.id);
+          if (device != null) {
+            devices.add(device);
+          }
           break;
         case DeviceType.electricLock:
-          devices.add(await getElectricLock(profile.id));
+          final device = await getElectricLock(profile.id);
+          if (device != null) {
+            devices.add(device);
+          }
           break;
         case DeviceType.electricRainDoor:
-          devices.add(await getElectricRainDoor(profile.id));
+          final device = await getElectricRainDoor(profile.id);
+          if (device != null) {
+            devices.add(device);
+          }
           break;
         case DeviceType.electricWaterHeater:
-          devices.add(await getElectricWaterHeater(profile.id));
+          final device = await getElectricWaterHeater(profile.id);
+          if (device != null) {
+            devices.add(device);
+          }
           break;
         case DeviceType.emergencyButton:
-          devices.add(await getEmergencyButton(profile.id));
+          final device = await getEmergencyButton(profile.id);
+          if (device != null) {
+            devices.add(device);
+          }
           break;
         case DeviceType.enhancedLightingSystem:
-          devices.add(await getEnhancedLightingSystem(profile.id));
+          final device = await getEnhancedLightingSystem(profile.id);
+          if (device != null) {
+            devices.add(device);
+          }
           break;
         case DeviceType.evCharger:
-          devices.add(await getEvCharger(profile.id));
+          final device = await getEvCharger(profile.id);
+          if (device != null) {
+            devices.add(device);
+          }
           break;
 
         case DeviceType.evChargerDischarger:
-          devices.add(await getEvChargerDischarger(profile.id));
+          final device = await getEvChargerDischarger(profile.id);
+          if (device != null) {
+            devices.add(device);
+          }
           break;
         case DeviceType.floorHeater:
-          devices.add(await getFloorHeater(profile.id));
+          final device = await getFloorHeater(profile.id);
+          if (device != null) {
+            devices.add(device);
+          }
           break;
         case DeviceType.fuelCell:
-          devices.add(await getFuelCell(profile.id));
+          final device = await getFuelCell(profile.id);
+          if (device != null) {
+            devices.add(device);
+          }
           break;
         case DeviceType.gasMeter:
-          devices.add(await getGasMeter(profile.id));
+          final device = await getGasMeter(profile.id);
+          if (device != null) {
+            devices.add(device);
+          }
           break;
 
         case DeviceType.generalLighting:
-          devices.add(await getGeneralLighting(profile.id));
+          final device = await getGeneralLighting(profile.id);
+          if (device != null) {
+            devices.add(device);
+          }
           break;
         case DeviceType.homeAirConditioner:
-          devices.add(await getHomeAirConditioner(profile.id));
+          final device = await getHomeAirConditioner(profile.id);
+          if (device != null) {
+            devices.add(device);
+          }
           break;
         case DeviceType.humanDetectionSensor:
-          devices.add(await getHumanDetectionSensor(profile.id));
+          final device = await getHumanDetectionSensor(profile.id);
+          if (device != null) {
+            devices.add(device);
+          }
           break;
         case DeviceType.humiditySensor:
-          devices.add(await getHumiditySensor(profile.id));
+          final device = await getHumiditySensor(profile.id);
+          if (device != null) {
+            devices.add(device);
+          }
           break;
         case DeviceType.hvSmartElectricEnergyMeter:
-          devices.add(await getHvSmartElectricEnergyMeter(profile.id));
+          final device = await getHvSmartElectricEnergyMeter(profile.id);
+          if (device != null) {
+            devices.add(device);
+          }
           break;
         case DeviceType.hybridWaterHeater:
-          devices.add(await getHybridWaterHeater(profile.id));
+          final device = await getHybridWaterHeater(profile.id);
+          if (device != null) {
+            devices.add(device);
+          }
           break;
         case DeviceType.illuminanceSensor:
-          devices.add(await getIlluminanceSensor(profile.id));
+          final device = await getIlluminanceSensor(profile.id);
+          if (device != null) {
+            devices.add(device);
+          }
           break;
         case DeviceType.instantaneousWaterHeater:
-          devices.add(await getInstantaneousWaterHeater(profile.id));
+          final device = await getInstantaneousWaterHeater(profile.id);
+          if (device != null) {
+            devices.add(device);
+          }
           break;
         case DeviceType.lightingSystem:
-          devices.add(await getLightingSystem(profile.id));
+          final device = await getLightingSystem(profile.id);
+          if (device != null) {
+            devices.add(device);
+          }
           break;
         case DeviceType.lvSmartElectricEnergyMeter:
-          devices.add(await getLvSmartElectricEnergyMeter(profile.id));
+          final device = await getLvSmartElectricEnergyMeter(profile.id);
+          if (device != null) {
+            devices.add(device);
+          }
           break;
         case DeviceType.monoFunctionalLighting:
-          devices.add(await getMonoFunctionalLighting(profile.id));
+          final device = await getMonoFunctionalLighting(profile.id);
+          if (device != null) {
+            devices.add(device);
+          }
           break;
         case DeviceType.powerDistributionBoardMetering:
-          devices.add(await getPowerDistributionBoardMetering(profile.id));
+          final device = await getPowerDistributionBoardMetering(profile.id);
+          if (device != null) {
+            devices.add(device);
+          }
           break;
         case DeviceType.pvPowerGeneration:
-          devices.add(await getPvPowerGeneration(profile.id));
+          final device = await getPvPowerGeneration(profile.id);
+          if (device != null) {
+            devices.add(device);
+          }
           break;
         case DeviceType.refrigerator:
-          devices.add(await getRefrigerator(profile.id));
+          final device = await getRefrigerator(profile.id);
+          if (device != null) {
+            devices.add(device);
+          }
           break;
         case DeviceType.riceCooker:
-          devices.add(await getRiceCooker(profile.id));
+          final device = await getRiceCooker(profile.id);
+          if (device != null) {
+            devices.add(device);
+          }
           break;
         case DeviceType.smartElectricEnergySubMeter:
-          devices.add(await getSmartElectricEnergySubMeter(profile.id));
+          final device = await getSmartElectricEnergySubMeter(profile.id);
+          if (device != null) {
+            devices.add(device);
+          }
           break;
         case DeviceType.storageBattery:
-          devices.add(await getStorageBattery(profile.id));
+          final device = await getStorageBattery(profile.id);
+          if (device != null) {
+            devices.add(device);
+          }
           break;
         case DeviceType.electricSwitch:
-          devices.add(await getSwitch(profile.id));
+          final device = await getSwitch(profile.id);
+          if (device != null) {
+            devices.add(device);
+          }
           break;
         case DeviceType.temperatureSensor:
-          devices.add(await getTemperatureSensor(profile.id));
+          final device = await getTemperatureSensor(profile.id);
+          if (device != null) {
+            devices.add(device);
+          }
           break;
         case DeviceType.tv:
-          devices.add(await getTv(profile.id));
+          final device = await getTv(profile.id);
+          if (device != null) {
+            devices.add(device);
+          }
           break;
         case DeviceType.ventilationFan:
-          devices.add(await getVentilationFan(profile.id));
+          final device = await getVentilationFan(profile.id);
+          if (device != null) {
+            devices.add(device);
+          }
           break;
         case DeviceType.vocSensor:
-          devices.add(await getVocSensor(profile.id));
+          final device = await getVocSensor(profile.id);
+          if (device != null) {
+            devices.add(device);
+          }
           break;
         case DeviceType.washerDryer:
-          devices.add(await getWasherDryer(profile.id));
+          final device = await getWasherDryer(profile.id);
+          if (device != null) {
+            devices.add(device);
+          }
           break;
         case DeviceType.waterFlowMeter:
-          devices.add(await getWaterFlowMeter(profile.id));
+          final device = await getWaterFlowMeter(profile.id);
+          if (device != null) {
+            devices.add(device);
+          }
           break;
         case DeviceType.wattHourMeter:
-          devices.add(await getWattHourMeter(profile.id));
+          final device = await getWattHourMeter(profile.id);
+          if (device != null) {
+            devices.add(device);
+          }
           break;
         case DeviceType.notYetSupported:
           break;
@@ -474,633 +769,1017 @@ class ElWebApiClient {
     return devices;
   }
 
-  Future<BathHeatingStatusSensor> getBathHeatingStatusSensor(
+  Future<BathHeatingStatusSensor?> getBathHeatingStatusSensor(
       String deviceId) async {
+    dynamic device;
     final request = Uri.parse(
         '$_baseUrl${CommonUri.devices}/$deviceId/${CommonUri.properties}');
-    final response = await _httpClient.get(request, headers: _header);
-    if (response.statusCode != 200) {
-      throw WebAPIServerRequestFail();
+    try {
+      final response = await _httpClient.get(request, headers: _header);
+      if (response.statusCode != 200) {
+        device = null;
+        throw WebAPIServerRequestFail();
+      }
+      final responseData = jsonDecode(response.body);
+      responseData[Keywords.deviceId] = deviceId;
+      device = BathHeatingStatusSensor.fromJson(
+          responseData as Map<String, dynamic>);
+    } on Exception catch (e) {
+      print(e.toString());
+      device = null;
     }
-    final responseData = jsonDecode(response.body);
-    responseData[Keywords.deviceId] = deviceId;
-    return BathHeatingStatusSensor.fromJson(
-        responseData as Map<String, dynamic>);
+    return device;
   }
 
-  Future<Co2Sensor> getCo2Sensor(String deviceId) async {
+  Future<Co2Sensor?> getCo2Sensor(String deviceId) async {
+    dynamic device;
     final request = Uri.parse(
         '$_baseUrl${CommonUri.devices}/$deviceId/${CommonUri.properties}');
-    final response = await _httpClient.get(request, headers: _header);
-    if (response.statusCode != 200) {
-      throw WebAPIServerRequestFail();
+    try {
+      final response = await _httpClient.get(request, headers: _header);
+      if (response.statusCode != 200) {
+        device = null;
+        throw WebAPIServerRequestFail();
+      }
+      final responseData = jsonDecode(response.body);
+      responseData[Keywords.deviceId] = deviceId;
+      device = Co2Sensor.fromJson(responseData as Map<String, dynamic>);
+    } on Exception catch (e) {
+      print(e.toString());
+      device = null;
     }
-    final responseData = jsonDecode(response.body);
-    responseData[Keywords.deviceId] = deviceId;
-    return Co2Sensor.fromJson(responseData as Map<String, dynamic>);
+    return device;
   }
 
-  Future<CurrentSensor> getCurrentSensor(String deviceId) async {
+  Future<CurrentSensor?> getCurrentSensor(String deviceId) async {
+    dynamic device;
     final request = Uri.parse(
         '$_baseUrl${CommonUri.devices}/$deviceId/${CommonUri.properties}');
-    final response = await _httpClient.get(request, headers: _header);
-    if (response.statusCode != 200) {
-      throw WebAPIServerRequestFail();
+    try {
+      final response = await _httpClient.get(request, headers: _header);
+      if (response.statusCode != 200) {
+        device = null;
+        throw WebAPIServerRequestFail();
+      }
+      final responseData = jsonDecode(response.body);
+      responseData[Keywords.deviceId] = deviceId;
+      device = CurrentSensor.fromJson(responseData as Map<String, dynamic>);
+    } on Exception catch (e) {
+      print(e.toString());
+      device = null;
     }
-    final responseData = jsonDecode(response.body);
-    responseData[Keywords.deviceId] = deviceId;
-    return CurrentSensor.fromJson(responseData as Map<String, dynamic>);
+    return device;
   }
 
-  Future<ElectricEnergySensor> getElectricEnergySensor(String deviceId) async {
+  Future<ElectricEnergySensor?> getElectricEnergySensor(String deviceId) async {
+    dynamic device;
     final request = Uri.parse(
         '$_baseUrl${CommonUri.devices}/$deviceId/${CommonUri.properties}');
-    final response = await _httpClient.get(request, headers: _header);
-    if (response.statusCode != 200) {
-      throw WebAPIServerRequestFail();
+    try {
+      final response = await _httpClient.get(request, headers: _header);
+      if (response.statusCode != 200) {
+        device = null;
+        throw WebAPIServerRequestFail();
+      }
+      final responseData = jsonDecode(response.body);
+      responseData[Keywords.deviceId] = deviceId;
+      device =
+          ElectricEnergySensor.fromJson(responseData as Map<String, dynamic>);
+    } on Exception catch (e) {
+      print(e.toString());
+      device = null;
     }
-    final responseData = jsonDecode(response.body);
-    responseData[Keywords.deviceId] = deviceId;
-    return ElectricEnergySensor.fromJson(responseData as Map<String, dynamic>);
+    return device;
   }
 
-  Future<EmergencyButton> getEmergencyButton(String deviceId) async {
+  Future<EmergencyButton?> getEmergencyButton(String deviceId) async {
+    dynamic device;
     final request = Uri.parse(
         '$_baseUrl${CommonUri.devices}/$deviceId/${CommonUri.properties}');
-    final response = await _httpClient.get(request, headers: _header);
-    if (response.statusCode != 200) {
-      throw WebAPIServerRequestFail();
+    try {
+      final response = await _httpClient.get(request, headers: _header);
+      if (response.statusCode != 200) {
+        device = null;
+        throw WebAPIServerRequestFail();
+      }
+      final responseData = jsonDecode(response.body);
+      responseData[Keywords.deviceId] = deviceId;
+      device = EmergencyButton.fromJson(responseData as Map<String, dynamic>);
+    } on Exception catch (e) {
+      print(e.toString());
+      device = null;
     }
-    final responseData = jsonDecode(response.body);
-    responseData[Keywords.deviceId] = deviceId;
-    return EmergencyButton.fromJson(responseData as Map<String, dynamic>);
+    return device;
   }
 
-  Future<HumanDetectionSensor> getHumanDetectionSensor(String deviceId) async {
+  Future<HumanDetectionSensor?> getHumanDetectionSensor(String deviceId) async {
+    dynamic device;
     final request = Uri.parse(
         '$_baseUrl${CommonUri.devices}/$deviceId/${CommonUri.properties}');
-    final response = await _httpClient.get(request, headers: _header);
-    if (response.statusCode != 200) {
-      throw WebAPIServerRequestFail();
+    try {
+      final response = await _httpClient.get(request, headers: _header);
+      if (response.statusCode != 200) {
+        device = null;
+        throw WebAPIServerRequestFail();
+      }
+      final responseData = jsonDecode(response.body);
+      responseData[Keywords.deviceId] = deviceId;
+      device =
+          HumanDetectionSensor.fromJson(responseData as Map<String, dynamic>);
+    } on Exception catch (e) {
+      print(e.toString());
+      device = null;
     }
-    final responseData = jsonDecode(response.body);
-    responseData[Keywords.deviceId] = deviceId;
-    return HumanDetectionSensor.fromJson(responseData as Map<String, dynamic>);
+    return device;
   }
 
-  Future<HumiditySensor> getHumiditySensor(String deviceId) async {
+  Future<HumiditySensor?> getHumiditySensor(String deviceId) async {
+    dynamic dev;
     final request = Uri.parse(
         '$_baseUrl${CommonUri.devices}/$deviceId/${CommonUri.properties}');
-    final response = await _httpClient.get(request, headers: _header);
-    if (response.statusCode != 200) {
-      throw WebAPIServerRequestFail();
+    try {
+      final response = await _httpClient.get(request, headers: _header);
+      if (response.statusCode != 200) {
+        dev = null;
+        throw WebAPIServerRequestFail();
+      }
+      final responseData = jsonDecode(response.body);
+      responseData[Keywords.deviceId] = deviceId;
+      dev = HumiditySensor.fromJson(responseData as Map<String, dynamic>);
+    } on Exception catch (e) {
+      print(e.toString());
+      dev = null;
     }
-    final responseData = jsonDecode(response.body);
-    responseData[Keywords.deviceId] = deviceId;
-    return HumiditySensor.fromJson(responseData as Map<String, dynamic>);
+    return dev;
   }
 
-  Future<IlluminanceSensor> getIlluminanceSensor(String deviceId) async {
+  Future<IlluminanceSensor?> getIlluminanceSensor(String deviceId) async {
+    dynamic device;
     final request = Uri.parse(
         '$_baseUrl${CommonUri.devices}/$deviceId/${CommonUri.properties}');
-    final response = await _httpClient.get(request, headers: _header);
-    if (response.statusCode != 200) {
-      throw WebAPIServerRequestFail();
+    try {
+      final response = await _httpClient.get(request, headers: _header);
+      if (response.statusCode != 200) {
+        device = null;
+        throw WebAPIServerRequestFail();
+      }
+      final responseData = jsonDecode(response.body);
+      responseData[Keywords.deviceId] = deviceId;
+      device = IlluminanceSensor.fromJson(responseData as Map<String, dynamic>);
+    } on Exception catch (e) {
+      print(e.toString());
+      device = null;
     }
-    final responseData = jsonDecode(response.body);
-    responseData[Keywords.deviceId] = deviceId;
-    return IlluminanceSensor.fromJson(responseData as Map<String, dynamic>);
+    return device;
   }
 
-  Future<TemperatureSensor> getTemperatureSensor(String deviceId) async {
+  Future<TemperatureSensor?> getTemperatureSensor(String deviceId) async {
+    dynamic device;
     final request = Uri.parse(
         '$_baseUrl${CommonUri.devices}/$deviceId/${CommonUri.properties}');
-    final response = await _httpClient.get(request, headers: _header);
-    if (response.statusCode != 200) {
-      throw WebAPIServerRequestFail();
+    try {
+      final response = await _httpClient.get(request, headers: _header);
+      if (response.statusCode != 200) {
+        device = null;
+        throw WebAPIServerRequestFail();
+      }
+      final responseData = jsonDecode(response.body);
+      responseData[Keywords.deviceId] = deviceId;
+      device = TemperatureSensor.fromJson(responseData as Map<String, dynamic>);
+    } on Exception catch (e) {
+      print(e.toString());
+      device = null;
     }
-    final responseData = jsonDecode(response.body);
-    responseData[Keywords.deviceId] = deviceId;
-    return TemperatureSensor.fromJson(responseData as Map<String, dynamic>);
+    return device;
   }
 
-  Future<VocSensor> getVocSensor(String deviceId) async {
+  Future<VocSensor?> getVocSensor(String deviceId) async {
+    dynamic device;
     final request = Uri.parse(
         '$_baseUrl${CommonUri.devices}/$deviceId/${CommonUri.properties}');
-    final response = await _httpClient.get(request, headers: _header);
-    if (response.statusCode != 200) {
-      throw WebAPIServerRequestFail();
+    try {
+      final response = await _httpClient.get(request, headers: _header);
+      if (response.statusCode != 200) {
+        device = null;
+        throw WebAPIServerRequestFail();
+      }
+      final responseData = jsonDecode(response.body);
+      responseData[Keywords.deviceId] = deviceId;
+      device = VocSensor.fromJson(responseData as Map<String, dynamic>);
+    } on Exception catch (e) {
+      print(e.toString());
+      device = null;
     }
-    final responseData = jsonDecode(response.body);
-    responseData[Keywords.deviceId] = deviceId;
-    return VocSensor.fromJson(responseData as Map<String, dynamic>);
+    return device;
   }
 
-  Future<AirCleaner> getAirCleaner(String deviceId) async {
+  Future<AirCleaner?> getAirCleaner(String deviceId) async {
+    dynamic device;
     final request = Uri.parse(
         '$_baseUrl${CommonUri.devices}/$deviceId/${CommonUri.properties}');
-    final response = await _httpClient.get(request, headers: _header);
-    if (response.statusCode != 200) {
-      throw WebAPIServerRequestFail();
+    try {
+      final response = await _httpClient.get(request, headers: _header);
+      if (response.statusCode != 200) {
+        device = null;
+        throw WebAPIServerRequestFail();
+      }
+      final responseData = jsonDecode(response.body);
+      responseData[Keywords.deviceId] = deviceId;
+      device = AirCleaner.fromJson(responseData as Map<String, dynamic>);
+    } on Exception catch (e) {
+      print(e.toString());
+      device = null;
     }
-    final responseData = jsonDecode(response.body);
-    responseData[Keywords.deviceId] = deviceId;
-    return AirCleaner.fromJson(responseData as Map<String, dynamic>);
+    return device;
   }
 
-  Future<AirConditionerVentilationFan> getAirConditionerVentilationFan(
+  Future<AirConditionerVentilationFan?> getAirConditionerVentilationFan(
       String deviceId) async {
+    dynamic device;
     final request = Uri.parse(
         '$_baseUrl${CommonUri.devices}/$deviceId/${CommonUri.properties}');
-    final response = await _httpClient.get(request, headers: _header);
-    if (response.statusCode != 200) {
-      throw WebAPIServerRequestFail();
+    try {
+      final response = await _httpClient.get(request, headers: _header);
+      if (response.statusCode != 200) {
+        device = null;
+        throw WebAPIServerRequestFail();
+      }
+      final responseData = jsonDecode(response.body);
+      responseData[Keywords.deviceId] = deviceId;
+      device = AirConditionerVentilationFan.fromJson(
+          responseData as Map<String, dynamic>);
+    } on Exception catch (e) {
+      print(e.toString());
+      device = null;
     }
-    final responseData = jsonDecode(response.body);
-    responseData[Keywords.deviceId] = deviceId;
-    return AirConditionerVentilationFan.fromJson(
-        responseData as Map<String, dynamic>);
+    return device;
   }
 
-  Future<CommercialAirConditionerIndoorUnit>
+  Future<CommercialAirConditionerIndoorUnit?>
       getCommercialAirConditionerIndoorUnit(String deviceId) async {
+    dynamic device;
     final request = Uri.parse(
         '$_baseUrl${CommonUri.devices}/$deviceId/${CommonUri.properties}');
-    final response = await _httpClient.get(request, headers: _header);
-    if (response.statusCode != 200) {
-      throw WebAPIServerRequestFail();
+    try {
+      final response = await _httpClient.get(request, headers: _header);
+      if (response.statusCode != 200) {
+        device = null;
+        throw WebAPIServerRequestFail();
+      }
+      final responseData = jsonDecode(response.body);
+      responseData[Keywords.deviceId] = deviceId;
+      device = CommercialAirConditionerIndoorUnit.fromJson(
+          responseData as Map<String, dynamic>);
+    } on Exception catch (e) {
+      print(e.toString());
+      device = null;
     }
-    final responseData = jsonDecode(response.body);
-    responseData[Keywords.deviceId] = deviceId;
-    return CommercialAirConditionerIndoorUnit.fromJson(
-        responseData as Map<String, dynamic>);
+    return device;
   }
 
-  Future<CommercialAirConditionerOutdoorUnit>
+  Future<CommercialAirConditionerOutdoorUnit?>
       getCommercialAirConditionerOutdoorUnit(String deviceId) async {
+    dynamic device;
     final request = Uri.parse(
         '$_baseUrl${CommonUri.devices}/$deviceId/${CommonUri.properties}');
-    final response = await _httpClient.get(request, headers: _header);
-    if (response.statusCode != 200) {
-      throw WebAPIServerRequestFail();
+    try {
+      final response = await _httpClient.get(request, headers: _header);
+      if (response.statusCode != 200) {
+        device = null;
+        throw WebAPIServerRequestFail();
+      }
+      final responseData = jsonDecode(response.body);
+      responseData[Keywords.deviceId] = deviceId;
+      device = CommercialAirConditionerOutdoorUnit.fromJson(
+          responseData as Map<String, dynamic>);
+    } on Exception catch (e) {
+      print(e.toString());
+      device = null;
     }
-    final responseData = jsonDecode(response.body);
-    responseData[Keywords.deviceId] = deviceId;
-    return CommercialAirConditionerOutdoorUnit.fromJson(
-        responseData as Map<String, dynamic>);
+    return device;
   }
 
-  Future<VentilationFan> getVentilationFan(String deviceId) async {
+  Future<VentilationFan?> getVentilationFan(String deviceId) async {
+    dynamic device;
     final request = Uri.parse(
         '$_baseUrl${CommonUri.devices}/$deviceId/${CommonUri.properties}');
-    final response = await _httpClient.get(request, headers: _header);
-    if (response.statusCode != 200) {
-      throw WebAPIServerRequestFail();
+    try {
+      final response = await _httpClient.get(request, headers: _header);
+      if (response.statusCode != 200) {
+        device = null;
+        throw WebAPIServerRequestFail();
+      }
+      final responseData = jsonDecode(response.body);
+      responseData[Keywords.deviceId] = deviceId;
+      device = VentilationFan.fromJson(responseData as Map<String, dynamic>);
+    } on Exception catch (e) {
+      print(e.toString());
+      device = null;
     }
-    final responseData = jsonDecode(response.body);
-    responseData[Keywords.deviceId] = deviceId;
-    return VentilationFan.fromJson(responseData as Map<String, dynamic>);
+    return device;
   }
 
-  Future<BathroomHeaterDryer> getBathroomHeaterDryer(String deviceId) async {
+  Future<BathroomHeaterDryer?> getBathroomHeaterDryer(String deviceId) async {
+    dynamic device;
     final request = Uri.parse(
         '$_baseUrl${CommonUri.devices}/$deviceId/${CommonUri.properties}');
-    final response = await _httpClient.get(request, headers: _header);
-    if (response.statusCode != 200) {
-      throw WebAPIServerRequestFail();
+    try {
+      final response = await _httpClient.get(request, headers: _header);
+      if (response.statusCode != 200) {
+        device = null;
+        throw WebAPIServerRequestFail();
+      }
+      final responseData = jsonDecode(response.body);
+      responseData[Keywords.deviceId] = deviceId;
+      device =
+          BathroomHeaterDryer.fromJson(responseData as Map<String, dynamic>);
+    } on Exception catch (e) {
+      print(e.toString());
+      device = null;
     }
-    final responseData = jsonDecode(response.body);
-    responseData[Keywords.deviceId] = deviceId;
-    return BathroomHeaterDryer.fromJson(responseData as Map<String, dynamic>);
+    return device;
   }
 
-  Future<ColdOrHotWaterHeatSourceEquipment>
+  Future<ColdOrHotWaterHeatSourceEquipment?>
       getColdOrHotWaterHeatSourceEquipment(String deviceId) async {
+    dynamic device;
     final request = Uri.parse(
         '$_baseUrl${CommonUri.devices}/$deviceId/${CommonUri.properties}');
-    final response = await _httpClient.get(request, headers: _header);
-    if (response.statusCode != 200) {
-      throw WebAPIServerRequestFail();
+    try {
+      final response = await _httpClient.get(request, headers: _header);
+      if (response.statusCode != 200) {
+        device = null;
+        throw WebAPIServerRequestFail();
+      }
+      final responseData = jsonDecode(response.body);
+      responseData[Keywords.deviceId] = deviceId;
+      device = ColdOrHotWaterHeatSourceEquipment.fromJson(
+          responseData as Map<String, dynamic>);
+    } on Exception catch (e) {
+      print(e.toString());
+      device = null;
     }
-    final responseData = jsonDecode(response.body);
-    responseData[Keywords.deviceId] = deviceId;
-    return ColdOrHotWaterHeatSourceEquipment.fromJson(
-        responseData as Map<String, dynamic>);
+    return device;
   }
 
-  Future<ElectricLock> getElectricLock(String deviceId) async {
+  Future<ElectricLock?> getElectricLock(String deviceId) async {
+    dynamic device;
     final request = Uri.parse(
         '$_baseUrl${CommonUri.devices}/$deviceId/${CommonUri.properties}');
-    final response = await _httpClient.get(request, headers: _header);
-    if (response.statusCode != 200) {
-      throw WebAPIServerRequestFail();
+    try {
+      final response = await _httpClient.get(request, headers: _header);
+      if (response.statusCode != 200) {
+        device = null;
+        throw WebAPIServerRequestFail();
+      }
+      final responseData = jsonDecode(response.body);
+      responseData[Keywords.deviceId] = deviceId;
+      device = ElectricLock.fromJson(responseData as Map<String, dynamic>);
+    } on Exception catch (e) {
+      print(e.toString());
+      device = null;
     }
-    final responseData = jsonDecode(response.body);
-    responseData[Keywords.deviceId] = deviceId;
-    return ElectricLock.fromJson(responseData as Map<String, dynamic>);
+    return device;
   }
 
-  Future<ElectricRainDoor> getElectricRainDoor(String deviceId) async {
+  Future<ElectricRainDoor?> getElectricRainDoor(String deviceId) async {
+    dynamic device;
     final request = Uri.parse(
         '$_baseUrl${CommonUri.devices}/$deviceId/${CommonUri.properties}');
-    final response = await _httpClient.get(request, headers: _header);
-    if (response.statusCode != 200) {
-      throw WebAPIServerRequestFail();
+    try {
+      final response = await _httpClient.get(request, headers: _header);
+      if (response.statusCode != 200) {
+        device = null;
+        throw WebAPIServerRequestFail();
+      }
+      final responseData = jsonDecode(response.body);
+      responseData[Keywords.deviceId] = deviceId;
+      device = ElectricRainDoor.fromJson(responseData as Map<String, dynamic>);
+    } on Exception catch (e) {
+      print(e.toString());
+      device = null;
     }
-    final responseData = jsonDecode(response.body);
-    responseData[Keywords.deviceId] = deviceId;
-    return ElectricRainDoor.fromJson(responseData as Map<String, dynamic>);
+    return device;
   }
 
-  Future<ElectricWaterHeater> getElectricWaterHeater(String deviceId) async {
+  Future<ElectricWaterHeater?> getElectricWaterHeater(String deviceId) async {
+    dynamic device;
     final request = Uri.parse(
         '$_baseUrl${CommonUri.devices}/$deviceId/${CommonUri.properties}');
-    final response = await _httpClient.get(request, headers: _header);
-    if (response.statusCode != 200) {
-      throw WebAPIServerRequestFail();
+    try {
+      final response = await _httpClient.get(request, headers: _header);
+      if (response.statusCode != 200) {
+        device = null;
+        throw WebAPIServerRequestFail();
+      }
+      final responseData = jsonDecode(response.body);
+      responseData[Keywords.deviceId] = deviceId;
+      device =
+          ElectricWaterHeater.fromJson(responseData as Map<String, dynamic>);
+    } on Exception catch (e) {
+      print(e.toString());
+      device = null;
     }
-    final responseData = jsonDecode(response.body);
-    responseData[Keywords.deviceId] = deviceId;
-    return ElectricWaterHeater.fromJson(responseData as Map<String, dynamic>);
+    return device;
   }
 
-  Future<EnhancedLightingSystem> getEnhancedLightingSystem(
+  Future<EnhancedLightingSystem?> getEnhancedLightingSystem(
       String deviceId) async {
+    dynamic device;
     final request = Uri.parse(
         '$_baseUrl${CommonUri.devices}/$deviceId/${CommonUri.properties}');
-    final response = await _httpClient.get(request, headers: _header);
-    if (response.statusCode != 200) {
-      throw WebAPIServerRequestFail();
+    try {
+      final response = await _httpClient.get(request, headers: _header);
+      if (response.statusCode != 200) {
+        device = null;
+        throw WebAPIServerRequestFail();
+      }
+      final responseData = jsonDecode(response.body);
+      responseData[Keywords.deviceId] = deviceId;
+      device =
+          EnhancedLightingSystem.fromJson(responseData as Map<String, dynamic>);
+    } on Exception catch (e) {
+      print(e.toString());
+      device = null;
     }
-    final responseData = jsonDecode(response.body);
-    responseData[Keywords.deviceId] = deviceId;
-    return EnhancedLightingSystem.fromJson(
-        responseData as Map<String, dynamic>);
+    return device;
   }
 
-  Future<EvChargerDischarger> getEvChargerDischarger(String deviceId) async {
+  Future<EvChargerDischarger?> getEvChargerDischarger(String deviceId) async {
+    dynamic device;
     final request = Uri.parse(
         '$_baseUrl${CommonUri.devices}/$deviceId/${CommonUri.properties}');
-    final response = await _httpClient.get(request, headers: _header);
-    if (response.statusCode != 200) {
-      throw WebAPIServerRequestFail();
+    try {
+      final response = await _httpClient.get(request, headers: _header);
+      if (response.statusCode != 200) {
+        device = null;
+        throw WebAPIServerRequestFail();
+      }
+      final responseData = jsonDecode(response.body);
+      responseData[Keywords.deviceId] = deviceId;
+      device =
+          EvChargerDischarger.fromJson(responseData as Map<String, dynamic>);
+    } on Exception catch (e) {
+      print(e.toString());
+      device = null;
     }
-    final responseData = jsonDecode(response.body);
-    responseData[Keywords.deviceId] = deviceId;
-    return EvChargerDischarger.fromJson(responseData as Map<String, dynamic>);
+    return device;
   }
 
-  Future<EvCharger> getEvCharger(String deviceId) async {
+  Future<EvCharger?> getEvCharger(String deviceId) async {
+    dynamic device;
     final request = Uri.parse(
         '$_baseUrl${CommonUri.devices}/$deviceId/${CommonUri.properties}');
-    final response = await _httpClient.get(request, headers: _header);
-    if (response.statusCode != 200) {
-      throw WebAPIServerRequestFail();
+    try {
+      final response = await _httpClient.get(request, headers: _header);
+      if (response.statusCode != 200) {
+        device = null;
+        throw WebAPIServerRequestFail();
+      }
+      final responseData = jsonDecode(response.body);
+      responseData[Keywords.deviceId] = deviceId;
+      device = EvCharger.fromJson(responseData as Map<String, dynamic>);
+    } on Exception catch (e) {
+      print(e.toString());
+      device = null;
     }
-    final responseData = jsonDecode(response.body);
-    responseData[Keywords.deviceId] = deviceId;
-    return EvCharger.fromJson(responseData as Map<String, dynamic>);
+    return device;
   }
 
-  Future<FloorHeater> getFloorHeater(String deviceId) async {
+  Future<FloorHeater?> getFloorHeater(String deviceId) async {
+    dynamic device;
     final request = Uri.parse(
         '$_baseUrl${CommonUri.devices}/$deviceId/${CommonUri.properties}');
-    final response = await _httpClient.get(request, headers: _header);
-    if (response.statusCode != 200) {
-      throw WebAPIServerRequestFail();
+    try {
+      final response = await _httpClient.get(request, headers: _header);
+      if (response.statusCode != 200) {
+        device = null;
+        throw WebAPIServerRequestFail();
+      }
+      final responseData = jsonDecode(response.body);
+      responseData[Keywords.deviceId] = deviceId;
+      device = FloorHeater.fromJson(responseData as Map<String, dynamic>);
+    } on Exception catch (e) {
+      print(e.toString());
+      device = null;
     }
-    final responseData = jsonDecode(response.body);
-    responseData[Keywords.deviceId] = deviceId;
-    return FloorHeater.fromJson(responseData as Map<String, dynamic>);
+    return device;
   }
 
-  Future<FuelCell> getFuelCell(String deviceId) async {
+  Future<FuelCell?> getFuelCell(String deviceId) async {
+    dynamic device;
     final request = Uri.parse(
         '$_baseUrl${CommonUri.devices}/$deviceId/${CommonUri.properties}');
-    final response = await _httpClient.get(request, headers: _header);
-    if (response.statusCode != 200) {
-      throw WebAPIServerRequestFail();
+    try {
+      final response = await _httpClient.get(request, headers: _header);
+      if (response.statusCode != 200) {
+        device = null;
+        throw WebAPIServerRequestFail();
+      }
+      final responseData = jsonDecode(response.body);
+      responseData[Keywords.deviceId] = deviceId;
+      device = FuelCell.fromJson(responseData as Map<String, dynamic>);
+    } on Exception catch (e) {
+      print(e.toString());
+      device = null;
     }
-    final responseData = jsonDecode(response.body);
-    responseData[Keywords.deviceId] = deviceId;
-    return FuelCell.fromJson(responseData as Map<String, dynamic>);
+    return device;
   }
 
-  Future<GasMeter> getGasMeter(String deviceId) async {
+  Future<GasMeter?> getGasMeter(String deviceId) async {
+    dynamic device;
     final request = Uri.parse(
         '$_baseUrl${CommonUri.devices}/$deviceId/${CommonUri.properties}');
-    final response = await _httpClient.get(request, headers: _header);
-    if (response.statusCode != 200) {
-      throw WebAPIServerRequestFail();
+    try {
+      final response = await _httpClient.get(request, headers: _header);
+      if (response.statusCode != 200) {
+        device = null;
+        throw WebAPIServerRequestFail();
+      }
+      final responseData = jsonDecode(response.body);
+      responseData[Keywords.deviceId] = deviceId;
+      device = GasMeter.fromJson(responseData as Map<String, dynamic>);
+    } on Exception catch (e) {
+      print(e.toString());
+      device = null;
     }
-    final responseData = jsonDecode(response.body);
-    responseData[Keywords.deviceId] = deviceId;
-    return GasMeter.fromJson(responseData as Map<String, dynamic>);
+    return device;
   }
 
-  Future<GeneralLighting> getGeneralLighting(String deviceId) async {
+  Future<GeneralLighting?> getGeneralLighting(String deviceId) async {
+    dynamic device;
     final request = Uri.parse(
         '$_baseUrl${CommonUri.devices}/$deviceId/${CommonUri.properties}');
-    final response = await _httpClient.get(request, headers: _header);
-    if (response.statusCode != 200) {
-      throw WebAPIServerRequestFail();
+    try {
+      final response = await _httpClient.get(request, headers: _header);
+      if (response.statusCode != 200) {
+        device = null;
+        throw WebAPIServerRequestFail();
+      }
+      final responseData = jsonDecode(response.body);
+      responseData[Keywords.deviceId] = deviceId;
+      device = GeneralLighting.fromJson(responseData as Map<String, dynamic>);
+    } on Exception catch (e) {
+      print(e.toString());
+      device = null;
     }
-    final responseData = jsonDecode(response.body);
-    responseData[Keywords.deviceId] = deviceId;
-    return GeneralLighting.fromJson(responseData as Map<String, dynamic>);
+    return device;
   }
 
-  Future<HomeAirConditioner> getHomeAirConditioner(String deviceId) async {
+  Future<HomeAirConditioner?> getHomeAirConditioner(String deviceId) async {
+    dynamic device;
     final request = Uri.parse(
         '$_baseUrl${CommonUri.devices}/$deviceId/${CommonUri.properties}');
-    final response = await _httpClient.get(request, headers: _header);
-    if (response.statusCode != 200) {
-      throw WebAPIServerRequestFail();
+    try {
+      final response = await _httpClient.get(request, headers: _header);
+      if (response.statusCode != 200) {
+        device = null;
+        throw WebAPIServerRequestFail();
+      }
+      final responseData = jsonDecode(response.body);
+      responseData[Keywords.deviceId] = deviceId;
+      device =
+          HomeAirConditioner.fromJson(responseData as Map<String, dynamic>);
+    } on Exception catch (e) {
+      print(e.toString());
+      device = null;
     }
-    final responseData = jsonDecode(response.body);
-    responseData[Keywords.deviceId] = deviceId;
-    return HomeAirConditioner.fromJson(responseData as Map<String, dynamic>);
+    return device;
   }
 
-  Future<HvSmartElectricEnergyMeter> getHvSmartElectricEnergyMeter(
+  Future<HvSmartElectricEnergyMeter?> getHvSmartElectricEnergyMeter(
       String deviceId) async {
+    dynamic device;
     final request = Uri.parse(
         '$_baseUrl${CommonUri.devices}/$deviceId/${CommonUri.properties}');
-    final response = await _httpClient.get(request, headers: _header);
-    if (response.statusCode != 200) {
-      throw WebAPIServerRequestFail();
+    try {
+      final response = await _httpClient.get(request, headers: _header);
+      if (response.statusCode != 200) {
+        device = null;
+        throw WebAPIServerRequestFail();
+      }
+      final responseData = jsonDecode(response.body);
+      responseData[Keywords.deviceId] = deviceId;
+      device = HvSmartElectricEnergyMeter.fromJson(
+          responseData as Map<String, dynamic>);
+    } on Exception catch (e) {
+      print(e.toString());
+      device = null;
     }
-    final responseData = jsonDecode(response.body);
-    responseData[Keywords.deviceId] = deviceId;
-    return HvSmartElectricEnergyMeter.fromJson(
-        responseData as Map<String, dynamic>);
+    return device;
   }
 
-  Future<HybridWaterHeater> getHybridWaterHeater(String deviceId) async {
+  Future<HybridWaterHeater?> getHybridWaterHeater(String deviceId) async {
+    dynamic device;
     final request = Uri.parse(
         '$_baseUrl${CommonUri.devices}/$deviceId/${CommonUri.properties}');
-    final response = await _httpClient.get(request, headers: _header);
-    if (response.statusCode != 200) {
-      throw WebAPIServerRequestFail();
+    try {
+      final response = await _httpClient.get(request, headers: _header);
+      if (response.statusCode != 200) {
+        device = null;
+        throw WebAPIServerRequestFail();
+      }
+      final responseData = jsonDecode(response.body);
+      responseData[Keywords.deviceId] = deviceId;
+      device = HybridWaterHeater.fromJson(responseData as Map<String, dynamic>);
+    } on Exception catch (e) {
+      print(e.toString());
+      device = null;
     }
-    final responseData = jsonDecode(response.body);
-    responseData[Keywords.deviceId] = deviceId;
-    return HybridWaterHeater.fromJson(responseData as Map<String, dynamic>);
+    return device;
   }
 
-  Future<InstantaneousWaterHeater> getInstantaneousWaterHeater(
+  Future<InstantaneousWaterHeater?> getInstantaneousWaterHeater(
       String deviceId) async {
+    dynamic device;
     final request = Uri.parse(
         '$_baseUrl${CommonUri.devices}/$deviceId/${CommonUri.properties}');
-    final response = await _httpClient.get(request, headers: _header);
-    if (response.statusCode != 200) {
-      throw WebAPIServerRequestFail();
+    try {
+      final response = await _httpClient.get(request, headers: _header);
+      if (response.statusCode != 200) {
+        device = null;
+        throw WebAPIServerRequestFail();
+      }
+      final responseData = jsonDecode(response.body);
+      responseData[Keywords.deviceId] = deviceId;
+      device = InstantaneousWaterHeater.fromJson(
+          responseData as Map<String, dynamic>);
+    } on Exception catch (e) {
+      print(e.toString());
+      device = null;
     }
-    final responseData = jsonDecode(response.body);
-    responseData[Keywords.deviceId] = deviceId;
-    return InstantaneousWaterHeater.fromJson(
-        responseData as Map<String, dynamic>);
+    return device;
   }
 
-  Future<LightingSystem> getLightingSystem(String deviceId) async {
+  Future<LightingSystem?> getLightingSystem(String deviceId) async {
+    dynamic device;
     final request = Uri.parse(
         '$_baseUrl${CommonUri.devices}/$deviceId/${CommonUri.properties}');
-    final response = await _httpClient.get(request, headers: _header);
-    if (response.statusCode != 200) {
-      throw WebAPIServerRequestFail();
+    try {
+      final response = await _httpClient.get(request, headers: _header);
+      if (response.statusCode != 200) {
+        device = null;
+        throw WebAPIServerRequestFail();
+      }
+      final responseData = jsonDecode(response.body);
+      responseData[Keywords.deviceId] = deviceId;
+      device = LightingSystem.fromJson(responseData as Map<String, dynamic>);
+    } on Exception catch (e) {
+      print(e.toString());
+      device = null;
     }
-    final responseData = jsonDecode(response.body);
-    responseData[Keywords.deviceId] = deviceId;
-    return LightingSystem.fromJson(responseData as Map<String, dynamic>);
+    return device;
   }
 
-  Future<LvSmartElectricEnergyMeter> getLvSmartElectricEnergyMeter(
+  Future<LvSmartElectricEnergyMeter?> getLvSmartElectricEnergyMeter(
       String deviceId) async {
+    dynamic device;
     final request = Uri.parse(
         '$_baseUrl${CommonUri.devices}/$deviceId/${CommonUri.properties}');
-    final response = await _httpClient.get(request, headers: _header);
-    if (response.statusCode != 200) {
-      throw WebAPIServerRequestFail();
+    try {
+      final response = await _httpClient.get(request, headers: _header);
+      if (response.statusCode != 200) {
+        device = null;
+        throw WebAPIServerRequestFail();
+      }
+      final responseData = jsonDecode(response.body);
+      responseData[Keywords.deviceId] = deviceId;
+      device = LvSmartElectricEnergyMeter.fromJson(
+          responseData as Map<String, dynamic>);
+    } on Exception catch (e) {
+      print(e.toString());
+      device = null;
     }
-    final responseData = jsonDecode(response.body);
-    responseData[Keywords.deviceId] = deviceId;
-    return LvSmartElectricEnergyMeter.fromJson(
-        responseData as Map<String, dynamic>);
+    return device;
   }
 
-  Future<MonoFunctionalLighting> getMonoFunctionalLighting(
+  Future<MonoFunctionalLighting?> getMonoFunctionalLighting(
       String deviceId) async {
+    dynamic device;
     final request = Uri.parse(
         '$_baseUrl${CommonUri.devices}/$deviceId/${CommonUri.properties}');
-    final response = await _httpClient.get(request, headers: _header);
-    if (response.statusCode != 200) {
-      throw WebAPIServerRequestFail();
+    try {
+      final response = await _httpClient.get(request, headers: _header);
+      if (response.statusCode != 200) {
+        device = null;
+        throw WebAPIServerRequestFail();
+      }
+      final responseData = jsonDecode(response.body);
+      responseData[Keywords.deviceId] = deviceId;
+      device =
+          MonoFunctionalLighting.fromJson(responseData as Map<String, dynamic>);
+    } on Exception catch (e) {
+      print(e.toString());
+      device = null;
     }
-    final responseData = jsonDecode(response.body);
-    responseData[Keywords.deviceId] = deviceId;
-    return MonoFunctionalLighting.fromJson(
-        responseData as Map<String, dynamic>);
+    return device;
   }
 
-  Future<PowerDistributionBoardMetering> getPowerDistributionBoardMetering(
+  Future<PowerDistributionBoardMetering?> getPowerDistributionBoardMetering(
       String deviceId) async {
+    dynamic device;
     final request = Uri.parse(
         '$_baseUrl${CommonUri.devices}/$deviceId/${CommonUri.properties}');
-    final response = await _httpClient.get(request, headers: _header);
-    if (response.statusCode != 200) {
-      throw WebAPIServerRequestFail();
+    try {
+      final response = await _httpClient.get(request, headers: _header);
+      if (response.statusCode != 200) {
+        device = null;
+        throw WebAPIServerRequestFail();
+      }
+      final responseData = jsonDecode(response.body);
+      responseData[Keywords.deviceId] = deviceId;
+      device = PowerDistributionBoardMetering.fromJson(
+          responseData as Map<String, dynamic>);
+    } on Exception catch (e) {
+      print(e.toString());
+      device = null;
     }
-    final responseData = jsonDecode(response.body);
-    responseData[Keywords.deviceId] = deviceId;
-    return PowerDistributionBoardMetering.fromJson(
-        responseData as Map<String, dynamic>);
+    return device;
   }
 
-  Future<PvPowerGeneration> getPvPowerGeneration(String deviceId) async {
+  Future<PvPowerGeneration?> getPvPowerGeneration(String deviceId) async {
+    dynamic device;
     final request = Uri.parse(
         '$_baseUrl${CommonUri.devices}/$deviceId/${CommonUri.properties}');
-    final response = await _httpClient.get(request, headers: _header);
-    if (response.statusCode != 200) {
-      throw WebAPIServerRequestFail();
+    try {
+      final response = await _httpClient.get(request, headers: _header);
+      if (response.statusCode != 200) {
+        device = null;
+        throw WebAPIServerRequestFail();
+      }
+      final responseData = jsonDecode(response.body);
+      responseData[Keywords.deviceId] = deviceId;
+      device = PvPowerGeneration.fromJson(responseData as Map<String, dynamic>);
+    } on Exception catch (e) {
+      print(e.toString());
+      device = null;
     }
-    final responseData = jsonDecode(response.body);
-    responseData[Keywords.deviceId] = deviceId;
-    return PvPowerGeneration.fromJson(responseData as Map<String, dynamic>);
+    return device;
   }
 
-  Future<SmartElectricEnergySubMeter> getSmartElectricEnergySubMeter(
+  Future<SmartElectricEnergySubMeter?> getSmartElectricEnergySubMeter(
       String deviceId) async {
+    dynamic device;
     final request = Uri.parse(
         '$_baseUrl${CommonUri.devices}/$deviceId/${CommonUri.properties}');
-    final response = await _httpClient.get(request, headers: _header);
-    if (response.statusCode != 200) {
-      throw WebAPIServerRequestFail();
+    try {
+      final response = await _httpClient.get(request, headers: _header);
+      if (response.statusCode != 200) {
+        device = null;
+        throw WebAPIServerRequestFail();
+      }
+      final responseData = jsonDecode(response.body);
+      responseData[Keywords.deviceId] = deviceId;
+      device = SmartElectricEnergySubMeter.fromJson(
+          responseData as Map<String, dynamic>);
+    } on Exception catch (e) {
+      print(e.toString());
+      device = null;
     }
-    final responseData = jsonDecode(response.body);
-    responseData[Keywords.deviceId] = deviceId;
-    return SmartElectricEnergySubMeter.fromJson(
-        responseData as Map<String, dynamic>);
+    return device;
   }
 
-  Future<StorageBattery> getStorageBattery(String deviceId) async {
+  Future<StorageBattery?> getStorageBattery(String deviceId) async {
+    dynamic device;
     final request = Uri.parse(
         '$_baseUrl${CommonUri.devices}/$deviceId/${CommonUri.properties}');
-    final response = await _httpClient.get(request, headers: _header);
-    if (response.statusCode != 200) {
-      throw WebAPIServerRequestFail();
+    try {
+      final response = await _httpClient.get(request, headers: _header);
+      if (response.statusCode != 200) {
+        device = null;
+        throw WebAPIServerRequestFail();
+      }
+      final responseData = jsonDecode(response.body);
+      responseData[Keywords.deviceId] = deviceId;
+      device = StorageBattery.fromJson(responseData as Map<String, dynamic>);
+    } on Exception catch (e) {
+      print(e.toString());
+      device = null;
     }
-    final responseData = jsonDecode(response.body);
-    responseData[Keywords.deviceId] = deviceId;
-    return StorageBattery.fromJson(responseData as Map<String, dynamic>);
+    return device;
   }
 
-  Future<WattHourMeter> getWattHourMeter(String deviceId) async {
+  Future<WattHourMeter?> getWattHourMeter(String deviceId) async {
+    dynamic device;
     final request = Uri.parse(
         '$_baseUrl${CommonUri.devices}/$deviceId/${CommonUri.properties}');
-    final response = await _httpClient.get(request, headers: _header);
-    if (response.statusCode != 200) {
-      throw WebAPIServerRequestFail();
+    try {
+      final response = await _httpClient.get(request, headers: _header);
+      if (response.statusCode != 200) {
+        device = null;
+        throw WebAPIServerRequestFail();
+      }
+      final responseData = jsonDecode(response.body);
+      responseData[Keywords.deviceId] = deviceId;
+      device = WattHourMeter.fromJson(responseData as Map<String, dynamic>);
+    } on Exception catch (e) {
+      print(e.toString());
+      device = null;
     }
-    final responseData = jsonDecode(response.body);
-    responseData[Keywords.deviceId] = deviceId;
-    return WattHourMeter.fromJson(responseData as Map<String, dynamic>);
+    return device;
   }
 
-  Future<WaterFlowMeter> getWaterFlowMeter(String deviceId) async {
+  Future<WaterFlowMeter?> getWaterFlowMeter(String deviceId) async {
+    dynamic device;
     final request = Uri.parse(
         '$_baseUrl${CommonUri.devices}/$deviceId/${CommonUri.properties}');
-    final response = await _httpClient.get(request, headers: _header);
-    if (response.statusCode != 200) {
-      throw WebAPIServerRequestFail();
+    try {
+      final response = await _httpClient.get(request, headers: _header);
+      if (response.statusCode != 200) {
+        device = null;
+        throw WebAPIServerRequestFail();
+      }
+      final responseData = jsonDecode(response.body);
+      responseData[Keywords.deviceId] = deviceId;
+      device = WaterFlowMeter.fromJson(responseData as Map<String, dynamic>);
+    } on Exception catch (e) {
+      print(e.toString());
+      device = null;
     }
-    final responseData = jsonDecode(response.body);
-    responseData[Keywords.deviceId] = deviceId;
-    return WaterFlowMeter.fromJson(responseData as Map<String, dynamic>);
+    return device;
   }
 
-  Future<CommercialShowcaseOutdoorUnit> getCommercialShowcaseOutdoorUnit(
+  Future<CommercialShowcaseOutdoorUnit?> getCommercialShowcaseOutdoorUnit(
       String deviceId) async {
+    dynamic device;
     final request = Uri.parse(
         '$_baseUrl${CommonUri.devices}/$deviceId/${CommonUri.properties}');
-    final response = await _httpClient.get(request, headers: _header);
-    if (response.statusCode != 200) {
-      throw WebAPIServerRequestFail();
+    try {
+      final response = await _httpClient.get(request, headers: _header);
+      if (response.statusCode != 200) {
+        device = null;
+        throw WebAPIServerRequestFail();
+      }
+      final responseData = jsonDecode(response.body);
+      responseData[Keywords.deviceId] = deviceId;
+      device = CommercialShowcaseOutdoorUnit.fromJson(
+          responseData as Map<String, dynamic>);
+    } on Exception catch (e) {
+      print(e.toString());
+      device = null;
     }
-    final responseData = jsonDecode(response.body);
-    responseData[Keywords.deviceId] = deviceId;
-    return CommercialShowcaseOutdoorUnit.fromJson(
-        responseData as Map<String, dynamic>);
+    return device;
   }
 
-  Future<CommercialShowcase> getCommercialShowcase(String deviceId) async {
+  Future<CommercialShowcase?> getCommercialShowcase(String deviceId) async {
+    dynamic device;
     final request = Uri.parse(
         '$_baseUrl${CommonUri.devices}/$deviceId/${CommonUri.properties}');
-    final response = await _httpClient.get(request, headers: _header);
-    if (response.statusCode != 200) {
-      throw WebAPIServerRequestFail();
+    try {
+      final response = await _httpClient.get(request, headers: _header);
+      if (response.statusCode != 200) {
+        device = null;
+        throw WebAPIServerRequestFail();
+      }
+      final responseData = jsonDecode(response.body);
+      responseData[Keywords.deviceId] = deviceId;
+      device =
+          CommercialShowcase.fromJson(responseData as Map<String, dynamic>);
+    } on Exception catch (e) {
+      print(e.toString());
+      device = null;
     }
-    final responseData = jsonDecode(response.body);
-    responseData[Keywords.deviceId] = deviceId;
-    return CommercialShowcase.fromJson(responseData as Map<String, dynamic>);
+    return device;
   }
 
-  Future<CookingHeater> getCookingHeater(String deviceId) async {
+  Future<CookingHeater?> getCookingHeater(String deviceId) async {
+    dynamic device;
     final request = Uri.parse(
         '$_baseUrl${CommonUri.devices}/$deviceId/${CommonUri.properties}');
-    final response = await _httpClient.get(request, headers: _header);
-    if (response.statusCode != 200) {
-      throw WebAPIServerRequestFail();
+    try {
+      final response = await _httpClient.get(request, headers: _header);
+      if (response.statusCode != 200) {
+        device = null;
+        throw WebAPIServerRequestFail();
+      }
+      final responseData = jsonDecode(response.body);
+      responseData[Keywords.deviceId] = deviceId;
+      device = CookingHeater.fromJson(responseData as Map<String, dynamic>);
+    } on Exception catch (e) {
+      print(e.toString());
+      device = null;
     }
-    final responseData = jsonDecode(response.body);
-    responseData[Keywords.deviceId] = deviceId;
-    return CookingHeater.fromJson(responseData as Map<String, dynamic>);
+    return device;
   }
 
-  Future<Refrigerator> getRefrigerator(String deviceId) async {
+  Future<Refrigerator?> getRefrigerator(String deviceId) async {
+    dynamic device;
     final request = Uri.parse(
         '$_baseUrl${CommonUri.devices}/$deviceId/${CommonUri.properties}');
-    final response = await _httpClient.get(request, headers: _header);
-    if (response.statusCode != 200) {
-      throw WebAPIServerRequestFail();
+    try {
+      final response = await _httpClient.get(request, headers: _header);
+      if (response.statusCode != 200) {
+        device = null;
+        throw WebAPIServerRequestFail();
+      }
+      final responseData = jsonDecode(response.body);
+      responseData[Keywords.deviceId] = deviceId;
+      device = Refrigerator.fromJson(responseData as Map<String, dynamic>);
+    } on Exception catch (e) {
+      print(e.toString());
+      device = null;
     }
-    final responseData = jsonDecode(response.body);
-    responseData[Keywords.deviceId] = deviceId;
-    return Refrigerator.fromJson(responseData as Map<String, dynamic>);
+    return device;
   }
 
-  Future<RiceCooker> getRiceCooker(String deviceId) async {
+  Future<RiceCooker?> getRiceCooker(String deviceId) async {
+    dynamic device;
     final request = Uri.parse(
         '$_baseUrl${CommonUri.devices}/$deviceId/${CommonUri.properties}');
-    final response = await _httpClient.get(request, headers: _header);
-    if (response.statusCode != 200) {
-      throw WebAPIServerRequestFail();
+    try {
+      final response = await _httpClient.get(request, headers: _header);
+      if (response.statusCode != 200) {
+        device = null;
+        throw WebAPIServerRequestFail();
+      }
+      final responseData = jsonDecode(response.body);
+      responseData[Keywords.deviceId] = deviceId;
+      device = RiceCooker.fromJson(responseData as Map<String, dynamic>);
+    } on Exception catch (e) {
+      print(e.toString());
+      device = null;
     }
-    final responseData = jsonDecode(response.body);
-    responseData[Keywords.deviceId] = deviceId;
-    return RiceCooker.fromJson(responseData as Map<String, dynamic>);
+    return device;
   }
 
-  Future<WasherDryer> getWasherDryer(String deviceId) async {
+  Future<WasherDryer?> getWasherDryer(String deviceId) async {
+    dynamic device;
     final request = Uri.parse(
         '$_baseUrl${CommonUri.devices}/$deviceId/${CommonUri.properties}');
-    final response = await _httpClient.get(request, headers: _header);
-    if (response.statusCode != 200) {
-      throw WebAPIServerRequestFail();
+    try {
+      final response = await _httpClient.get(request, headers: _header);
+      if (response.statusCode != 200) {
+        device = null;
+        throw WebAPIServerRequestFail();
+      }
+      final responseData = jsonDecode(response.body);
+      responseData[Keywords.deviceId] = deviceId;
+      device = WasherDryer.fromJson(responseData as Map<String, dynamic>);
+    } on Exception catch (e) {
+      print(e.toString());
+      device = null;
     }
-    final responseData = jsonDecode(response.body);
-    responseData[Keywords.deviceId] = deviceId;
-    return WasherDryer.fromJson(responseData as Map<String, dynamic>);
+    return device;
   }
 
-  Future<Switch> getSwitch(String deviceId) async {
+  Future<Switch?> getSwitch(String deviceId) async {
+    dynamic device;
     final request = Uri.parse(
         '$_baseUrl${CommonUri.devices}/$deviceId/${CommonUri.properties}');
-    final response = await _httpClient.get(request, headers: _header);
-    if (response.statusCode != 200) {
-      throw WebAPIServerRequestFail();
+    try {
+      final response = await _httpClient.get(request, headers: _header);
+      if (response.statusCode != 200) {
+        device = null;
+        throw WebAPIServerRequestFail();
+      }
+      final responseData = jsonDecode(response.body);
+      responseData[Keywords.deviceId] = deviceId;
+      device = Switch.fromJson(responseData as Map<String, dynamic>);
+    } on Exception catch (e) {
+      print(e.toString());
+      device = null;
     }
-    final responseData = jsonDecode(response.body);
-    responseData[Keywords.deviceId] = deviceId;
-    return Switch.fromJson(responseData as Map<String, dynamic>);
+    return device;
   }
 
-  Future<Controller> getController(String deviceId) async {
+  Future<Controller?> getController(String deviceId) async {
+    dynamic device;
     final request = Uri.parse(
         '$_baseUrl${CommonUri.devices}/$deviceId/${CommonUri.properties}');
-    final response = await _httpClient.get(request, headers: _header);
-    if (response.statusCode != 200) {
-      throw WebAPIServerRequestFail();
+    try {
+      final response = await _httpClient.get(request, headers: _header);
+      if (response.statusCode != 200) {
+        device = null;
+        throw WebAPIServerRequestFail();
+      }
+      final responseData = jsonDecode(response.body);
+      responseData[Keywords.deviceId] = deviceId;
+      device = Controller.fromJson(responseData as Map<String, dynamic>);
+    } on Exception catch (e) {
+      print(e.toString());
+      device = null;
     }
-    final responseData = jsonDecode(response.body);
-    responseData[Keywords.deviceId] = deviceId;
-    return Controller.fromJson(responseData as Map<String, dynamic>);
+    return device;
   }
 
-  Future<Tv> getTv(String deviceId) async {
+  Future<Tv?> getTv(String deviceId) async {
+    dynamic device;
     final request = Uri.parse(
         '$_baseUrl${CommonUri.devices}/$deviceId/${CommonUri.properties}');
-    final response = await _httpClient.get(request, headers: _header);
-    if (response.statusCode != 200) {
-      throw WebAPIServerRequestFail();
+    try {
+      final response = await _httpClient.get(request, headers: _header);
+      if (response.statusCode != 200) {
+        device = null;
+        throw WebAPIServerRequestFail();
+      }
+      final responseData = jsonDecode(response.body);
+      responseData[Keywords.deviceId] = deviceId;
+      device = Tv.fromJson(responseData as Map<String, dynamic>);
+    } on Exception catch (e) {
+      print(e.toString());
+      device = null;
     }
-    final responseData = jsonDecode(response.body);
-    responseData[Keywords.deviceId] = deviceId;
-    return Tv.fromJson(responseData as Map<String, dynamic>);
-  }
-
-  /// Get information from a home airconditioner with [id]
-  ///
-  /// HTTP GET : xxx/v1/devices/{deviceId}/properties/
-  /// Return null if it is not a home airconditioner
-  Future<HomeAirConditioner> getHomeAirconditioner(String id) async {
-    final request =
-        Uri.parse('$_baseUrl${CommonUri.devices}/$id/${CommonUri.properties}');
-    final response = await _httpClient.get(request, headers: _header);
-    if (response.statusCode != 200) {
-      throw WebAPIServerRequestFail();
-    }
-    final responseData = jsonDecode(response.body);
-    return HomeAirConditioner.fromJson(responseData as Map<String, dynamic>);
+    return device;
   }
 
   Future<bool> setPropertyNameWithValue(

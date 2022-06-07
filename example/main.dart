@@ -2,8 +2,13 @@ import 'package:el_webapi_api/src/el_webapi_client.dart';
 import 'package:el_webapi_api/src/models/models.dart';
 
 void main() async {
-  final ElWebApiClient client =
-      ElWebApiClient(url: 'http://150.65.231.106:5000/elapi/v1/');
+  const accessToken = 'accessToken';
+  const serverUrl = 'serverURL';
+  final ElWebApiClient client = ElWebApiClient(url: serverUrl, header: {
+    'Content-Type': 'application/json',
+    'Accept': 'application/json',
+    'Authorization': 'Bearer $accessToken',
+  });
 
   /// Get registered devices
   /// Request uri: xxx/elapi/v1/devices
@@ -17,26 +22,29 @@ void main() async {
     ///
   }
   final List<EchonetLiteDevice>? devices =
-      await client.fetchRegisteredDevicesResources(devList);
+      await client.fetchRegisteredDevicesResources(null);
   if (devices != null) {
+    print(devices.length);
     for (final EchonetLiteDevice dev in devices) {
       if (dev.runtimeType == TemperatureSensor) {
         final TemperatureSensor temperatureSensor = dev as TemperatureSensor;
-        print(temperatureSensor.toJson());
+        // print(temperatureSensor.toJson());
       }
     }
+  } else {
+    print('no thing');
   }
   final List<EchonetLiteDevice>? temperatureSensors =
       await client.getDeviceResourcesByType(DeviceType.temperatureSensor, null);
   if (temperatureSensors != null) {
     for (final EchonetLiteDevice sensor in temperatureSensors) {
       final TemperatureSensor temperatureSensor = sensor as TemperatureSensor;
-      print(temperatureSensor.toJson());
+      //print(temperatureSensor.toJson());
     }
   }
-  final TemperatureSensor sensor =
+  final TemperatureSensor? sensor =
       await client.getTemperatureSensor('temperatureSensor1653899075894947');
-  print(sensor.toJson());
+  //print(sensor.toJson());
   bool setResult =
       await client.setOperationStatus('generalLighting1653899076208582', false);
   // Or

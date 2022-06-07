@@ -1,7 +1,7 @@
 name: el_webapi_api
 description: A library to interact with ECHONET Lite Web API (v1.3.0).
  It uses http.Client library and supports parse returned data into corresponding objects.
-version: 0.0.1
+version: 0.0.1+1
 homepage: https://github.com/Cupham/EchonetLiteWebAPIClient
 environment:
   sdk: ">=2.16.2 <3.0.0"
