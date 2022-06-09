@@ -57,6 +57,7 @@ class ElWebApiClient {
             if (dev != null) {
               devices.add(dev);
             }
+
             break;
           case DeviceType.coldOrHotWaterHeatSourceEquipment:
             final dev = await getColdOrHotWaterHeatSourceEquipment(profile.id);
@@ -84,8 +85,7 @@ class ElWebApiClient {
             }
             break;
           case DeviceType.commercialShowcaseOutdoorUnit:
-            final dev =
-                await getCommercialAirConditionerOutdoorUnit(profile.id);
+            final dev = await getCommercialShowcaseOutdoorUnit(profile.id);
             if (dev != null) {
               devices.add(dev);
             }
@@ -137,6 +137,7 @@ class ElWebApiClient {
             if (dev != null) {
               devices.add(dev);
             }
+
             break;
           case DeviceType.enhancedLightingSystem:
             final dev = await getEnhancedLightingSystem(profile.id);
@@ -288,6 +289,7 @@ class ElWebApiClient {
             if (dev != null) {
               devices.add(dev);
             }
+
             break;
           case DeviceType.tv:
             final dev = await getTv(profile.id);
@@ -307,6 +309,7 @@ class ElWebApiClient {
               devices.add(dev);
             }
             break;
+
           case DeviceType.washerDryer:
             final dev = await getWasherDryer(profile.id);
             if (dev != null) {
@@ -356,7 +359,7 @@ class ElWebApiClient {
       case DeviceType.commercialShowcase:
         return getCommercialShowcase(id);
       case DeviceType.commercialShowcaseOutdoorUnit:
-        return getCommercialAirConditionerOutdoorUnit(id);
+        return getCommercialShowcaseOutdoorUnit(id);
       case DeviceType.controller:
         return getController(id);
       case DeviceType.cookingHeater:
@@ -492,6 +495,7 @@ class ElWebApiClient {
           if (device != null) {
             devices.add(device);
           }
+
           break;
         case DeviceType.coldOrHotWaterHeatSourceEquipment:
           final device = await getColdOrHotWaterHeatSourceEquipment(profile.id);
@@ -520,8 +524,7 @@ class ElWebApiClient {
           }
           break;
         case DeviceType.commercialShowcaseOutdoorUnit:
-          final device =
-              await getCommercialAirConditionerOutdoorUnit(profile.id);
+          final device = await getCommercialShowcaseOutdoorUnit(profile.id);
           if (device != null) {
             devices.add(device);
           }
@@ -629,6 +632,7 @@ class ElWebApiClient {
           if (device != null) {
             devices.add(device);
           }
+
           break;
         case DeviceType.humiditySensor:
           final device = await getHumiditySensor(profile.id);
@@ -725,6 +729,7 @@ class ElWebApiClient {
           if (device != null) {
             devices.add(device);
           }
+
           break;
         case DeviceType.tv:
           final device = await getTv(profile.id);

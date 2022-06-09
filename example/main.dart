@@ -2,8 +2,8 @@ import 'package:el_webapi_api/src/el_webapi_client.dart';
 import 'package:el_webapi_api/src/models/models.dart';
 
 void main() async {
-  const accessToken = 'accessToken';
-  const serverUrl = 'serverURL';
+  const accessToken = 'xxx-AXbjg4r9zbj7NXs';
+  const serverUrl = 'xxx';
   final ElWebApiClient client = ElWebApiClient(url: serverUrl, header: {
     'Content-Type': 'application/json',
     'Accept': 'application/json',
@@ -22,32 +22,32 @@ void main() async {
     ///
   }
   final List<EchonetLiteDevice>? devices =
-      await client.fetchRegisteredDevicesResources(null);
+      await client.getDeviceResourcesByType(DeviceType.temperatureSensor, null);
+
+  if (devices != null) {
+    print(devices.length);
+    for (EchonetLiteDevice? dev in devices) {
+      TemperatureSensor ss = dev as TemperatureSensor;
+      print(ss.toJson());
+    }
+  } else {
+    print('empty');
+  }
+  /*
+  print(DateTime.now());
+  final List<EchonetLiteDevice>? devices =
+      await client.fetchRegisteredDevicesResources(devList);
+  print(DateTime.now());
   if (devices != null) {
     print(devices.length);
     for (final EchonetLiteDevice dev in devices) {
-      if (dev.runtimeType == TemperatureSensor) {
-        final TemperatureSensor temperatureSensor = dev as TemperatureSensor;
-        // print(temperatureSensor.toJson());
+      print(dev.deviceType);
+      if (dev.runtimeType == EmergencyButton) {
+        final EmergencyButton temperatureSensor = dev as EmergencyButton;
+        print(temperatureSensor.toJson());
       }
     }
   } else {
     print('no thing');
-  }
-  final List<EchonetLiteDevice>? temperatureSensors =
-      await client.getDeviceResourcesByType(DeviceType.temperatureSensor, null);
-  if (temperatureSensors != null) {
-    for (final EchonetLiteDevice sensor in temperatureSensors) {
-      final TemperatureSensor temperatureSensor = sensor as TemperatureSensor;
-      //print(temperatureSensor.toJson());
-    }
-  }
-  final TemperatureSensor? sensor =
-      await client.getTemperatureSensor('temperatureSensor1653899075894947');
-  //print(sensor.toJson());
-  bool setResult =
-      await client.setOperationStatus('generalLighting1653899076208582', false);
-  // Or
-  bool setResult2 = await client.setPropertyNameWithValue(
-      'generalLighting1653899076208582', 'operationStatus', false);
+  }*/
 }
