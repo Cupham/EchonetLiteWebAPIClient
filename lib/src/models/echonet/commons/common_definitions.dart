@@ -19,11 +19,11 @@ class JaEnStatement {
 @JsonSerializable(explicitToJson: true)
 class TimerReservation {
   const TimerReservation(
-      {required this.timeBased, required this.relatimeTimeBased});
+      {required this.timeBased, required this.relativeTimeBased});
   factory TimerReservation.fromJson(Map<String, dynamic> json) =>
       _$TimerReservationFromJson(json);
   final bool timeBased;
-  final bool relatimeTimeBased;
+  final bool relativeTimeBased;
   Map<String, dynamic> toJson() => _$TimerReservationToJson(this);
 }
 //Override converters

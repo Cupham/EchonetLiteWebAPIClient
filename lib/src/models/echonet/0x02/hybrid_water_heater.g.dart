@@ -101,8 +101,9 @@ Map<String, dynamic> _$HybridWaterHeaterToJson(HybridWaterHeater instance) {
 
 const _$HeatingStatusEnumEnumMap = {
   HeatingStatusEnum.auto: 'auto',
-  HeatingStatusEnum.manualNoHeating: 'manualNoHeating',
+  HeatingStatusEnum.manualNotHeating: 'manualNotHeating',
   HeatingStatusEnum.manualHeating: 'manualHeating',
+  HeatingStatusEnum.manualNoHeating: 'manualNoHeating',
 };
 
 const _$LinkageModeEnumEnumMap = {

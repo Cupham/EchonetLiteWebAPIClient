@@ -126,7 +126,7 @@ class PowerDistributionBoardMetering extends CommonProperty
   final ElectricEnergyLog? normalDirectionCumulativeElectricEnergyLog;
   @JsonKey(fromJson: electricEnergyLogFromJson, toJson: electricEnergyLogToJson)
   final ElectricEnergyLog? reverseDirectionCumulativeElectricEnergyLog;
-  final num? instantaneousElectricPower;
+  final dynamic instantaneousElectricPower;
   @JsonKey(fromJson: electricCurrentFromJson, toJson: electricCurrentToJson)
   final ElectricCurrent? instantaneousCurrent;
   @JsonKey(fromJson: electricVoltageFromJson, toJson: electricVoltageToJson)

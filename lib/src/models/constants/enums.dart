@@ -257,7 +257,12 @@ enum DegreeOfOpenCloseEnum {
 
 enum TankOperationModeEnum { standard, saving, extra }
 
-enum HeatingStatusEnum { auto, manualNoHeating, manualHeating }
+enum HeatingStatusEnum {
+  auto,
+  manualNotHeating,
+  manualHeating,
+  manualNoHeating
+}
 
 enum BathOperationEnum { runningHotWater, noOperation, keepingTemperature }
 

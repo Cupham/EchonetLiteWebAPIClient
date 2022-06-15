@@ -16,3 +16,11 @@
 ## 0.0.1+5
 
 * Support DDv1.4.0 ( 49 devices)
+
+## 0.0.1+6
+
+* Bug fixes
+
+## 0.0.1+7
+
+* Bug fixes related to date-time parsers

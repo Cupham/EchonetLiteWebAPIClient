@@ -21,11 +21,11 @@ Map<String, dynamic> _$JaEnStatementToJson(JaEnStatement instance) =>
 TimerReservation _$TimerReservationFromJson(Map<String, dynamic> json) =>
     TimerReservation(
       timeBased: json['timeBased'] as bool,
-      relatimeTimeBased: json['relatimeTimeBased'] as bool,
+      relativeTimeBased: json['relativeTimeBased'] as bool,
     );
 
 Map<String, dynamic> _$TimerReservationToJson(TimerReservation instance) =>
     <String, dynamic>{
       'timeBased': instance.timeBased,
-      'relatimeTimeBased': instance.relatimeTimeBased,
+      'relativeTimeBased': instance.relativeTimeBased,
     };

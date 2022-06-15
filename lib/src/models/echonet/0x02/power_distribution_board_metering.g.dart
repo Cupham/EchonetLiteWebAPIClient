@@ -46,7 +46,7 @@ PowerDistributionBoardMetering _$PowerDistributionBoardMeteringFromJson(
           json['instantaneousCurrentListDuplex'] as Map<String, dynamic>?),
       instantaneousCurrentListSimplex: electricCurrentListFromJson(
           json['instantaneousCurrentListSimplex'] as Map<String, dynamic>?),
-      instantaneousElectricPower: json['instantaneousElectricPower'] as num?,
+      instantaneousElectricPower: json['instantaneousElectricPower'],
       instantaneousElectricPowerListDuplex: electricPowerListFromJson(
           json['instantaneousElectricPowerListDuplex']
               as Map<String, dynamic>?),

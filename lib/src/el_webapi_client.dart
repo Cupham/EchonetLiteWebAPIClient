@@ -285,6 +285,7 @@ class ElWebApiClient {
             }
             break;
           case DeviceType.temperatureSensor:
+            print(profile.id);
             final dev = await getTemperatureSensor(profile.id);
             if (dev != null) {
               devices.add(dev);
@@ -465,6 +466,7 @@ class ElWebApiClient {
     registeredDeviceList = registeredDeviceList ?? await getRegisteredDevices();
     final List<EchonetLiteDevice> devices = [];
     for (final profile in registeredDeviceList.profiles) {
+      print(profile.id);
       switch (profile.deviceType) {
         case DeviceType.airCleaner:
           final device = await getAirCleaner(profile.id);
@@ -725,6 +727,7 @@ class ElWebApiClient {
           }
           break;
         case DeviceType.temperatureSensor:
+          print(profile.id);
           final device = await getTemperatureSensor(profile.id);
           if (device != null) {
             devices.add(device);

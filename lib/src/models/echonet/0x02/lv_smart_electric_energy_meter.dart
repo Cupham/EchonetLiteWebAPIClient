@@ -70,7 +70,7 @@ class LvSmartElectricEnergyMeter extends CommonProperty
   final dynamic reverseDirectionCumulativeElectricEnergy;
   @JsonKey(fromJson: electricEnergyLogFromJson, toJson: electricEnergyLogToJson)
   final ElectricEnergyLog? reverseDirectionCumulativeElectricEnergyLog1;
-  final num? instantaneousElectricPower;
+  final dynamic instantaneousElectricPower;
   @JsonKey(fromJson: electricCurrentFromJson, toJson: electricCurrentToJson)
   final ElectricCurrent? instantaneousCurrent;
   @JsonKey(

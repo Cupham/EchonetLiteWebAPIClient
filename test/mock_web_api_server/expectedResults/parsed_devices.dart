@@ -3797,12 +3797,12 @@ class DeviceLoadedWithAllProperties {
     expect(d, isNotNull);
     expect(d?.onTimerReservation.runtimeType, TimerReservation);
     expect(d?.onTimerReservation?.timeBased, true);
-    expect(d?.onTimerReservation?.relatimeTimeBased, false);
+    expect(d?.onTimerReservation?.relativeTimeBased, false);
     expect(d?.timeOfOnTimer, DateFormat.Hms().parse("14:23:56"));
     expect(d?.relativeTimeOfOnTimer, 2255);
     expect(d?.offTimerReservation.runtimeType, TimerReservation);
     expect(d?.offTimerReservation?.timeBased, false);
-    expect(d?.offTimerReservation?.relatimeTimeBased, true);
+    expect(d?.offTimerReservation?.relativeTimeBased, true);
     expect(d?.timeOfOffTimer, DateFormat.Hms().parse("10:23:09"));
     expect(d?.relativeTimeOfOffTimer, 13518);
     expect(d?.airFlowLevel, "auto");
@@ -4602,7 +4602,7 @@ class DeviceLoadedWithAllProperties {
     expect(d, isNotNull);
     expect(d?.onTimerReservation, false);
     expect(d?.onTimerTime, DateFormat.Hms().parse("19:17:58"));
-    expect(d?.automaticWaterHeating, HeatingStatusEnum.manualNoHeating);
+    expect(d?.automaticWaterHeating, HeatingStatusEnum.manualNotHeating);
     expect(d?.automaticWaterHeatingTemperatureControl, false);
     expect(d?.waterHeatingStatus, false);
     expect(d?.targetWaterHeatingTemperature, "undefined");

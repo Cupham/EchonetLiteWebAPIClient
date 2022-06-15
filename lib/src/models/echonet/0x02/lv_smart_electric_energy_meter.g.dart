@@ -36,7 +36,7 @@ LvSmartElectricEnergyMeter _$LvSmartElectricEnergyMeterFromJson(
           json['cumulativeElectricEnergyLog2'] as Map<String, dynamic>?),
       instantaneousCurrent: electricCurrentFromJson(
           json['instantaneousCurrent'] as Map<String, dynamic>?),
-      instantaneousElectricPower: json['instantaneousElectricPower'] as num?,
+      instantaneousElectricPower: json['instantaneousElectricPower'],
       normalDirectionCumulativeElectricEnergy:
           json['normalDirectionCumulativeElectricEnergy'],
       normalDirectionCumulativeElectricEnergyAtEvery30Min:

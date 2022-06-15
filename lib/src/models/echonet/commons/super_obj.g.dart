@@ -11,6 +11,9 @@ CommonProperty _$CommonPropertyFromJson(Map<String, dynamic> json) =>
       operationStatus: json['operationStatus'] as bool,
       installationLocation: json['installationLocation'] as String,
       protocol: protocolFromJson(json['protocol'] as Map<String, dynamic>),
+      faultStatus: json['faultStatus'] as bool,
+      manufacturer:
+          manufacturerFromJson(json['manufacturer'] as Map<String, dynamic>),
       id: json['id'] as String?,
       instantaneousElectricPowerConsumption:
           json['instantaneousElectricPowerConsumption'] as num?,
@@ -18,10 +21,7 @@ CommonProperty _$CommonPropertyFromJson(Map<String, dynamic> json) =>
           json['consumedCumulativeElectricEnergy'] as num?,
       manufacturerFaultCode: json['manufacturerFaultCode'] as String?,
       currentLimit: json['currentLimit'] as num?,
-      faultStatus: json['faultStatus'] as bool,
       faultDescription: json['faultDescription'] as String?,
-      manufacturer:
-          manufacturerFromJson(json['manufacturer'] as Map<String, dynamic>),
       businessFacilityCode: json['businessFacilityCode'] as String?,
       productCode: json['productCode'] as String?,
       serialNumber: json['serialNumber'] as String?,
