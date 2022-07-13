@@ -1,7 +1,6 @@
 // ignore_for_file: lines_longer_than_80_chars, avoid_print
 
 import 'dart:convert';
-
 import 'package:el_webapi_api/src/models/models.dart';
 
 import 'package:http/http.dart' as http;
@@ -329,6 +328,24 @@ class ElWebApiClient {
               devices.add(dev);
             }
             break;
+          case DeviceType.electricCurtain:
+            final dev = await getElectricCurtain(profile.id);
+            if (dev != null) {
+              devices.add(dev);
+            }
+            break;
+          case DeviceType.electricWindow:
+            final dev = await getElectricWindow(profile.id);
+            if (dev != null) {
+              devices.add(dev);
+            }
+            break;
+          case DeviceType.electricShade:
+            final dev = await getElectricShade(profile.id);
+            if (dev != null) {
+              devices.add(dev);
+            }
+            break;
           case DeviceType.notYetSupported:
             break;
         }
@@ -343,6 +360,12 @@ class ElWebApiClient {
     switch (deviceType) {
       case DeviceType.airCleaner:
         return getAirCleaner(id);
+      case DeviceType.electricCurtain:
+        return getElectricCurtain(id);
+      case DeviceType.electricWindow:
+        return getElectricWindow(id);
+      case DeviceType.electricShade:
+        return getElectricShade(id);
       case DeviceType.airConditionerVentilationFan:
         return getAirConditionerVentilationFan(id);
       case DeviceType.bathHeatingStatusSensor:
@@ -470,6 +493,24 @@ class ElWebApiClient {
       switch (profile.deviceType) {
         case DeviceType.airCleaner:
           final device = await getAirCleaner(profile.id);
+          if (device != null) {
+            devices.add(device);
+          }
+          break;
+        case DeviceType.electricCurtain:
+          final device = await getElectricCurtain(profile.id);
+          if (device != null) {
+            devices.add(device);
+          }
+          break;
+        case DeviceType.electricWindow:
+          final device = await getElectricWindow(profile.id);
+          if (device != null) {
+            devices.add(device);
+          }
+          break;
+        case DeviceType.electricShade:
+          final device = await getElectricShade(profile.id);
           if (device != null) {
             devices.add(device);
           }
@@ -954,6 +995,66 @@ class ElWebApiClient {
       final responseData = jsonDecode(response.body);
       responseData[Keywords.deviceId] = deviceId;
       device = TemperatureSensor.fromJson(responseData as Map<String, dynamic>);
+    } on Exception catch (e) {
+      print(e.toString());
+      device = null;
+    }
+    return device;
+  }
+
+  Future<ElectricCurtain?> getElectricCurtain(String deviceId) async {
+    dynamic device;
+    final request = Uri.parse(
+        '$_baseUrl${CommonUri.devices}/$deviceId/${CommonUri.properties}');
+    try {
+      final response = await _httpClient.get(request, headers: _header);
+      if (response.statusCode != 200) {
+        device = null;
+        throw WebAPIServerRequestFail();
+      }
+      final responseData = jsonDecode(response.body);
+      responseData[Keywords.deviceId] = deviceId;
+      device = ElectricCurtain.fromJson(responseData as Map<String, dynamic>);
+    } on Exception catch (e) {
+      print(e.toString());
+      device = null;
+    }
+    return device;
+  }
+
+  Future<ElectricWindow?> getElectricWindow(String deviceId) async {
+    dynamic device;
+    final request = Uri.parse(
+        '$_baseUrl${CommonUri.devices}/$deviceId/${CommonUri.properties}');
+    try {
+      final response = await _httpClient.get(request, headers: _header);
+      if (response.statusCode != 200) {
+        device = null;
+        throw WebAPIServerRequestFail();
+      }
+      final responseData = jsonDecode(response.body);
+      responseData[Keywords.deviceId] = deviceId;
+      device = ElectricWindow.fromJson(responseData as Map<String, dynamic>);
+    } on Exception catch (e) {
+      print(e.toString());
+      device = null;
+    }
+    return device;
+  }
+
+  Future<ElectricShade?> getElectricShade(String deviceId) async {
+    dynamic device;
+    final request = Uri.parse(
+        '$_baseUrl${CommonUri.devices}/$deviceId/${CommonUri.properties}');
+    try {
+      final response = await _httpClient.get(request, headers: _header);
+      if (response.statusCode != 200) {
+        device = null;
+        throw WebAPIServerRequestFail();
+      }
+      final responseData = jsonDecode(response.body);
+      responseData[Keywords.deviceId] = deviceId;
+      device = ElectricShade.fromJson(responseData as Map<String, dynamic>);
     } on Exception catch (e) {
       print(e.toString());
       device = null;

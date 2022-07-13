@@ -3,6 +3,9 @@
 import 'package:json_annotation/json_annotation.dart';
 
 enum DeviceType {
+  electricShade,
+  electricCurtain,
+  electricWindow,
   co2Sensor,
   bathHeatingStatusSensor,
   emergencyButton,

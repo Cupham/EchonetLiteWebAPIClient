@@ -42,6 +42,9 @@ Map<String, dynamic> _$ProfileToJson(Profile instance) => <String, dynamic>{
     };
 
 const _$DeviceTypeEnumMap = {
+  DeviceType.electricShade: 'electricShade',
+  DeviceType.electricCurtain: 'electricCurtain',
+  DeviceType.electricWindow: 'electricWindow',
   DeviceType.co2Sensor: 'co2Sensor',
   DeviceType.bathHeatingStatusSensor: 'bathHeatingStatusSensor',
   DeviceType.emergencyButton: 'emergencyButton',

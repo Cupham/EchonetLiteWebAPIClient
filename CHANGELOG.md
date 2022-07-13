@@ -24,3 +24,7 @@
 ## 0.0.1+7
 
 * Bug fixes related to date-time parsers
+
+## 0.0.1+8
+
+* Added electricWindow, electricCurtain, electricShade
